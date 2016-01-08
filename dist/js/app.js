@@ -35,12 +35,10 @@
 
 // Application Scripts:
 
-// Десктоп меню (выпадайки)
-// Мобильное меню
-// Сообщения об отправке формы
+
 // Кнопка скролла страницы
 // Модальное окно
-// Если браузер не знает о svg-картинках
+// Корзина в хидере
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -52,43 +50,7 @@ jQuery(document).ready(function ($) {
     $body.append('<div id="overlay" class="overlay"></div>');
     var $overlay = $('#overlay');//оверлей
 
-    //
-    // Десктоп меню (выпадайки)
-    //---------------------------------------------------------------------------------------
-    var initDesktopMenu = (function () {
-        $('.js-menu li').on({
-            mouseenter: function () {
-                $(this).find('ul:first').stop(true, true).fadeIn('fast');
-                $(this).find('a:first').addClass('hover');
-            },
-            mouseleave: function () {
-                $(this).find('ul').stop(true, true).fadeOut('slow');
-                $(this).find('a:first').removeClass('hover');
-            }
-        })
-    })();
-
-    //
-    // Мобильное меню
-    //---------------------------------------------------------------------------------------
-    var initMobileMenu = (function () {
-        //...
-    })();
-
-    //
-    // Сообщения об отправке формы
-    //---------------------------------------------------------------------------------------
-    // после аякс-отправки формы ($form), если все ок - $form.find('.g-notice--ok').fadeIn();
-    // если вернуло ошибку - $form.find('.g-notice--bad').fadeIn();
-    var showFormNotice = (function () {
-        var $notice = $('.js-notice');
-        $notice.append('<a class="g-notice__close"><i class="icon-cancel"></i></a>'); //иконка закрытия
-        $notice.on('click', '.g-notice__close', function (e) {//закроем блок по клику на иконку
-            e.preventDefault();
-            $(this).parent('div').fadeOut();
-        });
-    }());
-
+    
     //
     // Кнопка скролла страницы
     //---------------------------------------------------------------------------------------
@@ -167,14 +129,79 @@ jQuery(document).ready(function ($) {
         if (link) { showModal.open(link); }
     });
 
+
     //
-    // Если браузер не знает о svg-картинках
+    // Корзина в хидере
     //---------------------------------------------------------------------------------------
-    if (!Modernizr.svg) {
-        $('img[src*="svg"]').attr('src', function () {
-            return $(this).attr('src').replace('.svg', '.png');
+    var headerCart = (function () {
+        var method = {},
+            $block = $('.js-hcart'),
+            $cart = $block.find('.h-cart__inner'),
+            $btn = $block.find('.js-hcart-toggle');
+
+        method.close = function () {
+            $btn.removeClass('active');
+            $cart.slideUp();
+            $body.unbind('click', method.close);
+        }
+
+        method.show = function () {
+            $btn.addClass('active');
+            $cart.slideDown();
+            $block.mouseleave(function () {
+                $body.bind('click', method.close);
+            }).mouseenter(function () {
+                $body.unbind('click', method.close);
+            });
+        }
+        
+        $block.on('click', '.js-hcart-toggle', function () {
+            if ($(this).hasClass('active')) {
+                method.close();
+            } else {
+                method.show();
+            }
         });
-    }
+
+        return method;
+    })();
+
+    //
+    // Форма поиска в хидере
+    //---------------------------------------------------------------------------------------
+    var headerSearch = (function () {
+        var method = {},
+            $block = $('.js-search'),
+            $form = $block.find('form'),
+            $menu = $block.parents('.h-menu'),
+            $btn = $block.find('.js-search-toggle');
+
+        method.close = function () {
+            $btn.removeClass('active');
+            $form.removeClass('active');
+            $menu.removeClass('compact');
+            $body.unbind('click', method.close);
+        }
+        method.show = function () {
+            $btn.addClass('active');
+            $form.addClass('active');
+            $menu.addClass('compact');
+            $block.mouseleave(function () {
+                $body.bind('click', method.close);
+            }).mouseenter(function () {
+                $body.unbind('click', method.close);
+            });
+        }
+
+        $block.on('click', '.js-search-toggle', function () {
+            if ($(this).hasClass('active')) {
+                method.close();
+            } else {
+                method.show();
+            }
+        });
+        return method;
+    })();
     
     //
     // Если браузер не знает о плейсхолдерах в формах

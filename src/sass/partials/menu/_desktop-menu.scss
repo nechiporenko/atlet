@@ -1,2 +1,54 @@
 ﻿@import "../../modules/_base.scss";
 /* Desktop Menu */
+.h-menu{
+    @extend .g-container;
+    background:$primary;
+    color:#fff;
+    border-radius:$border-radius;
+    display:none;
+
+    @include media($desktop){
+        display:block;
+    }
+
+    @include media($large){
+        padding:0 23px;
+    }
+}
+
+.h-menu__list{
+    @extend .g-clearlist;
+    float:left;
+    font-size:0;
+}
+.h-menu__item{
+    display:inline-block;
+    @include font-size(12px);
+}
+.h-menu__link{
+    display:inline-block;
+    padding:29px 20px;
+    color:#fff;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-family:$font-bold;
+    @include transition(padding 1s ease);
+
+    @include media($large){
+        padding:29px 25px;
+    }
+
+    &:hover,
+    &:active,
+    &.current{
+        color:$primary-alt;
+    }
+
+    &.current{
+        cursor:default;
+    }
+}
+
+.compact .h-menu__link{
+    padding:29px 8px;
+}

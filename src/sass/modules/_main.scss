@@ -48,7 +48,7 @@ html{
 .page{//body style
     min-height:100%;
     line-height:1;
-    font-family: 'GothamPro-Regular', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family:$font-regular, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     color: $text-color;
 }
 
@@ -58,7 +58,7 @@ html{
 }
 
 /* Typography*/
-h1, h2, h3, h4, h5, h6, .g-title, g-subtitle{
+h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
   margin-top: 0;
   @include px2rem(margin-bottom, 1.4*$project-line-height);
   line-height:strip-units($project-line-height/16);

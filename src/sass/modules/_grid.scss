@@ -4,6 +4,7 @@
 .g-container {
     @include outer-container();
     box-sizing:border-box;
+    min-width:300px;
 }
 
 .g-row{

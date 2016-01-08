@@ -1,4 +1,62 @@
 ﻿@import "../../modules/_base.scss";
 
 /*Site Logo*/
+.b-header__logo{
+    width:84px;
+    height:68px;
+    @include hide-text;
+    background-image:url(../img/logo.png);
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+    top:0; left:10px;
 
+    @include media($tablet){
+        width:140px;
+        height:114px;
+
+        @include hidpi(1.5){
+            background-image:url(../img/logo2x.png);
+        }
+    }
+
+    @include media($large){
+        left:0;
+    }
+}
+
+.b-header__caption{
+    display:none;
+    float:left;
+    margin:0 0 0 100px;
+    font-family:$font-caps;
+    font-style:italic;
+    font-weight:normal;
+    @include font-size(16px);
+    text-shadow:2px 2px 5px rgba(#000, .5);
+    color:#fff;
+
+    @include media($mobile){
+        display:block;
+    }
+
+    @include media($tablet){
+        display:none;
+    }
+
+    @include media($desktop){
+        display:block;
+        margin-left:160px;
+        @include font-size(30px);
+    }
+}
+.b-header__caption-word{
+    display:block;
+    margin-left:30px;
+    line-height:1.6;
+
+    @include media($desktop){
+        margin-left:58px;
+    }
+}

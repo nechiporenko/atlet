@@ -1,0 +1,71 @@
+﻿@import "../../modules/_base.scss";
+/*Header Search Form*/
+.h-search{
+    float:right;
+    padding-left:21px;
+    border-left:1px solid #a6d8f0;
+}
+.h-search__form{
+    padding:16px 0;
+    float:right;
+    width:0;
+    max-width:0;
+    min-width:0;
+    overflow:hidden;
+    @include transition-property(max-width, min-width, opacity);//анимируем появление влево-вправо
+    @include transition-duration(1s);
+    @include transition-timing-function(ease);
+    opacity:0;
+
+    &.active{
+        opacity:1;
+        width:160px;
+        min-width:160px;
+        max-width:160px;
+    }
+}
+
+
+.h-search__input{
+    @extend .g-input;
+    margin:0;
+
+    &:hover,
+    &:focus{
+        border-color:$primary-alt;
+    }
+}
+.h-search__toggle{
+    float:right;
+    margin:0;
+    padding:29px 20px;
+    border:none;
+    background:none;
+    box-sizing:border-box;
+    font-family:$font-bold;
+    @include font-size(12px);
+    text-transform:uppercase;
+    color:#fff;
+    outline:0;
+
+    @include media($large){
+        padding:29px 25px;
+    }
+
+    &:hover,
+    &:focus,
+    &.active{
+        color:$primary-alt;
+    }
+}
+
+/*For small screen - show alt search button*/
+.b-header__search-btn{
+    @extend .h-cart__btn;
+    margin:0 0 0 5px;
+    float:right;
+
+    @include media($desktop){
+        display:none;
+    }
+}

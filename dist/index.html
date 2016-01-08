@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boilerplate</title>
+    <title>Main Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -16,44 +16,230 @@
     <![endif]-->
 </head>
 <body class="page">
-    <div class="g-container">
-        <article class="page__content">
-            <h1 class="g-title">Page Title</h1>
-            <p>Pellentesque habitant morbi tristique <a href="#">senectus et netus</a> et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            <ul>
-                <li>Morbi in sem quis <strong>dui placerat</strong> ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+    <!--HEADER START-->
+    <header class="b-header">
+        <div class="b-header__main">
+            <div class="b-header__inner">
+                <div class="g-row">
+                    <ul class="b-header__social">
+                        <li class="b-header__social-item">
+                            <a href="#" class="b-header__social-link">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="b-header__social-item">
+                            <a href="#" class="b-header__social-link">
+                                <i class="icon-gplus"></i>
+                            </a>
+                        </li>
+                        <li class="b-header__social-item">
+                            <a href="#" class="b-header__social-link">
+                                <i class="icon-odnoklassniki"></i>
+                            </a>
+                        </li>
+                        <li class="b-header__social-item">
+                            <a href="#" class="b-header__social-link">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="b-header__login">
+                        <a href="#" class="b-header__login-link b-header__login-link--alt">Регистрация</a>
+                        <a href="#" class="b-header__login-link">Вход</a>
+                    </div>
+                    <div class="b-header__hours">
+                        График работы: понедельник-суббота, с 9:00 до 20:00
+                    </div>
+                </div><!--/g-row-->
+
+                <div class="g-row">
+                    <button type="button" class="b-header__search-btn" data-modal="#modal-search"><i class="icon-search"></i></button>
+                    <!--HEADER BASKET START-->
+                    <div class="h-cart js-hcart">
+                        <div class="g-row">
+                            <span class="h-cart__caption">
+                                Товаров в корзине: 0 шт.
+                                <br />
+                                0.00 грн
+                            </span>
+                            <button type="button" class="h-cart__btn js-hcart-toggle"><i class="flaticon-basket37"></i></button>
+                        </div>
+                        <div class="h-cart__inner">
+                            <table class="h-cart__info">
+                                <tr>
+                                    <td>
+                                        <a href="#" class="h-cart__link">
+                                            <img src="http://placehold.it/30x47" class="h-cart__img" alt="Product" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="h-cart__link">100% Whey Gold Standart (2273г)</a>
+                                    </td>
+                                    <td>
+                                        x&nbsp;1
+                                    </td>
+                                    <td>
+                                        2950.00грн
+                                    </td>
+                                    <td>
+                                        <button type="button" class="h-cart__remove" title="Удалить">
+                                            <i class="icon-cancel"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="h-cart__link">
+                                            <img src="http://placehold.it/40x47" class="h-cart__img" alt="Product" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="h-cart__link">Animal Flex (44 пак)</a>
+                                    </td>
+                                    <td>
+                                        x&nbsp;1
+                                    </td>
+                                    <td>
+                                        350.00грн
+                                    </td>
+                                    <td>
+                                        <button type="button" class="h-cart__remove" title="Удалить">
+                                            <i class="icon-cancel"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="h-cart__total">
+                                <tr>
+                                    <td>
+                                        <b>Сумма:</b>
+                                    </td>
+                                    <td>3845.00грн</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Скидка от суммы заказа (7%):</b>
+                                    </td>
+                                    <td>-269.15грн</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Итого:</b>
+                                    </td>
+                                    <td>3575.85грн</td>
+                                </tr>
+                            </table>
+                            <div class="h-cart__action">
+                                <a href="cart.html" class="h-cart__action-link">Просмотр корзины</a>
+                                <a href="checkout.html" class="h-cart__action-link">Оформить заказ</a>
+                            </div>
+                        </div><!--/h-cart__inner-->
+                    </div>
+                    <!--HEADER BASKET END-->
+
+                    <!--HEADER CONTACTS START-->
+                    <div class="h-contacts">
+                        <a href="tel:+380443388670" class="h-contacts__link">(044) 338-86-70</a>
+                        <a href="tel:+380664902700" class="h-contacts__link">(066) 490-27-00</a>
+                        <a href="mailto:order@muscle-factory.com.ua" class="h-contacts__link h-contacts__link--mail">order@muscle-factory.com.ua</a>
+                        <button type="button" class="h-contacts__btn h-contacts__btn--large" data-modal="#modal-contacts"><i class="icon-phone"></i></button>
+                        <button type="button" class="h-contacts__btn h-contacts__btn--small" data-modal="#modal-contacts"><i class="icon-phone"></i></button>
+                    </div>
+                    <!--/HEADER CONTACTS END-->
+                    
+                    <!--HEADER LOGO & CAPTION START-->
+                    <a href="index.html" class="b-header__logo">Атлет-маркет</a>
+                    <h1 class="b-header__caption">
+                        Спортивное
+                        <span class="b-header__caption-word">питание</span>
+                    </h1>
+                    <!--/HEADER LOGO & CAPTION END-->
+                </div><!--/g-row-->
+            </div><!--/b-header__inner-->
+        </div><!--/b-header__main-->
+
+        <!--DESKTOP MENU START-->
+        <nav class="h-menu">
+            <ul class="h-menu__list">
+                <li class="h-menu__item">
+                    <a href="index.html" class="h-menu__link">Главная</a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="howto.html" class="h-menu__link">Как заказать</a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="delivery.html" class="h-menu__link">Доставка и оплата</a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="discount.html" class="h-menu__link">Система скидок</a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="news.html" class="h-menu__link">Новости</a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="sitemap.html" class="h-menu__link">Карта сайта</a>
+                </li>
             </ul>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-            
-            <div class="g-row">
-                <form class="g-col g-col--one-half">
-                    <h2 class="g-subtitle">Page Subtitle</h2>
-                    <label class="g-visuallyhidden">Label</label>
-                    <input type="text" class="g-input" placeholder="Your Name" />
-                    <label class="g-visuallyhidden">Label</label>
-                    <input type="email" class="g-input" placeholder="Your Email" />
-                    <button type="submit" class="g-btn"><i class="icon-mail"></i> Submit</button>
+
+            <!--SEARCH FORM START-->
+            <div class="h-search js-search">
+                <button type="button" class="h-search__toggle js-search-toggle"><i class="icon-search"></i>Поиск</button>
+                <form class="h-search__form">
+                    <label class="g-visuallyhidden">Поиск по сайту</label>
+                    <input type="text" class="h-search__input" placeholder="Искать..." />
                 </form>
             </div>
+            <!--/SEARCH FORM END-->
+        </nav>
+        <!--/DESKTOP MENU END-->
+    </header>
+    <!--/HEADER END-->
 
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    <main style="height:1000px"></main>
 
-            <div class="g-text-right">
-                <button type="button" class="g-btn" data-modal="#modal">Open Modal <i class="icon-right-open-big"></i></button>
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="modal-search">
+        <form class="modal__content">
+            <label class="g-title">Поиск по сайту</label>
+            <input type="text" class="g-input" placeholder="Искать..." />
+            <button type="submit" class="g-btn"><i class="icon-search"></i>Найти</button>
+        </form>
+    </div>
+
+    <div class="modal" id="modal-contacts">
+        <form class="modal__content">
+            <span class="g-title">Связаться с нами:</span>
+            <p>График работы: понедельник-суббота, с 9:00 до 20:00</p>
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <p>
+                        Городской: <a href="tel:+380443388670"><i class="icon-phone"></i>(044) 338-86-70</a>
+                    </p>
+                </div>
+                <div class="g-col g-col--one-half">
+                    <p>
+                        Мобильный: <a href="tel:+380664902700"><i class="icon-phone"></i>(066) 490-27-00</a>
+                    </p>
+                </div>
             </div>
-        </article>
+            <p>
+                Почта: <a href="mailto:order@muscle-factory.com.ua">order@muscle-factory.com.ua</a>
+            </p>
+            <span class="g-title">Заказать обратный звонок:</span>
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <label class="g-visuallyhidden">Ваше имя</label>
+                    <input type="text" class="g-input" placeholder="Как Вас зовут" required />
+                </div>
+                <div class="g-col g-col--one-half">
+                    <label class="g-visuallyhidden">Ваш телефон</label>
+                    <input type="text" class="g-input" placeholder="Ваш номер телефона" required />
+                </div>
+            </div>
+            <button type="submit" class="g-btn">Жду звонка <i class="icon-right-open"></i></button>
+        </form>
     </div>
-        
-    <div class="modal" id="modal">
-        <div class="modal__content">
-            <span class="g-title">Modal Title</span>
-            <p>Modal content...</p>
-        </div>
-    </div>
-    
+    <!--/MODAL WINDOWS END-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/app.min.js"></script>

@@ -1,4 +1,9 @@
 @import "../modules/base";
-
-@import "header/_logo.scss";
 /*Site Header*/
+.b-header{}
+@import "header/_inner.scss";
+@import "header/_logo.scss";
+@import "header/_basket.scss";
+@import "header/_contacts.scss";
+@import "header/_search.scss";
+

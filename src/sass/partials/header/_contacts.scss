@@ -1,0 +1,109 @@
+﻿@import "../../modules/_base.scss";
+/*Header Open Hours*/
+.b-header__hours{
+    margin:0 40px 15px 0;
+    padding-top:3px;
+    @include font-size(12px);
+    float:right;
+    display:none;
+
+    @include media($small){
+        display:block;
+    }
+
+    @include media($tablet){
+        margin-right:120px;
+    }
+
+    @include media($desktop){
+        margin-right:30px;
+    }
+
+    @include media($large){
+        margin-right:90px;
+    }
+}
+
+/*Header Contacts*/
+.h-contacts{
+    float:right;
+    padding-left:75px;
+    margin-right:5px;
+    position:relative;
+
+    @include media($tablet){
+        margin-right:30px;
+    }
+
+    @include media($large){
+        margin-right:145px;
+    }
+}
+.h-contacts__link{
+    display:none;
+    margin-bottom:5px;
+    font-family:$font-medium;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    @include font-size(18px);
+
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+
+    @include media($tablet){
+        display:block;
+    }
+
+    @include media($desktop){
+        @include font-size(24px);
+    }
+}
+
+.h-contacts__link--mail{
+    margin:0;
+    font-family:$font-regular;
+    @include font-size(10px);
+    letter-spacing:-.75px;
+
+    @include media($desktop){
+        @include font-size(12px);
+    }
+}
+
+.h-contacts__btn--small{
+   @extend .h-cart__btn;
+
+    @include media($tablet){
+        display:none;
+    }
+}
+
+.h-contacts__btn--large{
+    width:54px; height:54px;
+    padding:0; margin:0;
+    line-height:50px;
+    box-sizing:border-box;
+    background:none;
+    border:2px solid #a3b2c0;
+    border-radius:50%;
+    text-align:center;
+    color:#fff;
+    @include font-size(20px);
+    position:absolute;
+    left:0; top:0;
+    display:none;
+    outline:0;
+
+    &:hover,
+    &:focus{
+        color:$primary-alt;
+        border-color:#fff;
+    }
+
+    @include media($tablet){
+        display:block;
+    }
+}
