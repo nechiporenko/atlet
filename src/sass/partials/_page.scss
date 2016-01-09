@@ -1,4 +1,48 @@
 ﻿@import "../modules/_base.scss";
+/*Page Grid*/
+.page__inner{
+    @extend .g-container;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.page__lcol,
+.page__rcol,
+.page__main{
+    min-height:1px;
+    box-sizing:border-box;
+}
+
+.page__main{
+    padding:0 10px;
+
+    @include media($large){
+        padding:0 30px;
+    }
+}
+
+@include media($tablet){
+    .page__lcol{
+        width: 31.04%;
+        float:left;
+    }
+    .page__main{
+        width: 68.96%;
+        float:left;
+    }
+}
+
+@include media($desktop){
+    .page__lcol,
+    .page__rcol{
+        width:23.077%;
+        float:left;
+    }
+    .page__main{
+        width: 53.846%;
+    }
+}
+
 
 @import "page/_breadcrumbs.scss";
 @import "page/_slider.scss";
