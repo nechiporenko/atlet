@@ -1,14 +1,14 @@
 ﻿@import "../../modules/_base.scss";
 /*Promo Blocks*/
 .b-promo{
-    margin:0 -10px 16px;
+    margin:0 -10px 20px;
     border:1px solid $primary;
     border-radius:$border-radius;
     border-top-width:8px;
 
 
     @include media($tablet){
-        margin:0 0 16px;
+        margin:0 0 20px;
     }
 }
 .b-bromo__title{}
@@ -127,7 +127,7 @@
 
 .b-promo__link{
     display:block;
-    min-height:168px;
+    min-height:158px;
     text-decoration:none;
 }
 .b-promo__caption{
@@ -138,7 +138,7 @@
     margin-bottom:5px;
 }
 .b-promo__thumb{
-    width:100px;
+    width:90px;
     margin:0 auto 10px;
     position:relative;
 
@@ -190,7 +190,7 @@
     border-color:$primary-alt;
 
     .b-promo__name{
-        min-width:168px;
+        min-width:158px;
         @include linear-gradient(to bottom, $primary-alt, darken($primary-alt, 5%));
 
         &:before{

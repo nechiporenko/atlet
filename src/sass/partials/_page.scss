@@ -53,7 +53,7 @@
     font-weight:400;
 }
 .page__description{
-    margin:0 -10px 16px;
+    margin:0 -10px 20px;
     @include font-size(12px);
     line-height:1.25;
 
@@ -67,7 +67,7 @@
     }
 
     @include media($tablet){
-        margin:0 0 16px;
+        margin:0 0 20px;
     }
 }
 
