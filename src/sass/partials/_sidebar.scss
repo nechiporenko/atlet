@@ -1,6 +1,6 @@
 ﻿@import "../modules/_base.scss";
 
-@import "sidebar/_category.scss";
-@import "sidebar/_latest.scss";
-@import "sidebar/_vote.scss";
-@import "sidebar/_news.scss";
+@import "sidebar/_category.scss"; //Меню категорий
+@import "sidebar/_latest.scss"; //Слайдер новых товаров
+@import "sidebar/_vote.scss"; //Голосовалка
+@import "sidebar/_news.scss"; //Блок новостей в сайдбаре

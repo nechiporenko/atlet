@@ -218,7 +218,22 @@ jQuery(document).ready(function ($) {
             prevText: '<i class="icon-left-open-big"></i>'
         });
     }
-    if($('.js-sidebar-slider').length){initSidebarSlider()}
+    if ($('.js-sidebar-slider').length) { initSidebarSlider() }
+
+    //
+    // Слайдер на главной странице
+    //---------------------------------------------------------------------------------------
+    function initMainSlider() {
+        var $slider = $('.js-slider');
+        $slider.bxSlider({
+            mode: 'fade',
+            controls: false,
+            auto: true,
+            pause: 8000,
+            autoHover:true
+        });
+    }
+    if($('.js-slider').length){initMainSlider()}
 
     //
     // Если браузер не знает о плейсхолдерах в формах

@@ -1,2 +1,20 @@
 ﻿@import "../../modules/_base.scss";
-/*Slider*/
+/*Homepage Slider*/
+.b-slider{
+    margin:0 -10px 16px;
+    display:none;
+
+    @include media($tablet){
+        margin:0 0 16px;
+    }
+    @include media($desktop){
+        display:block;
+    }
+}
+.b-slider__list{
+    @extend .g-clearlist;
+}
+.b-slider__img{
+    border-radius:$border-radius;
+    @extend .g-full-width;
+}
