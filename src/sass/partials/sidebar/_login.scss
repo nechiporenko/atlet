@@ -1,0 +1,49 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar Login Block*/
+.b-login{
+    @extend .b-vote;
+}
+.b-login__title{
+    @extend .b-category__title;
+}
+.b-login__name{
+    @extend .b-category__name;
+}
+.b-login__inner{
+    padding:9px 10px;
+    border-left:1px solid $primary;
+    border-bottom:1px solid $primary;
+    border-right:1px solid $primary;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+
+    @include media($large){
+        padding:22px;
+    }
+}
+
+.b-login__input{
+    @extend .g-input;
+    height:32px;
+}
+
+.b-login__link{
+    float:left;
+    @extend .g-link;
+    @include font-size(14px);
+}
+.b-login__btn{
+    display:inline-block;
+    float:right;
+    padding:0; margin:0;
+    border:0; background:none;
+    @include font-size(14px);
+    color:$primary;
+    outline:0;
+
+
+    &:hover,
+    &:focus{
+        text-decoration:underline;
+    }
+}

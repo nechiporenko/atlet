@@ -24,6 +24,7 @@ textarea {
     color:$text-color;
     box-shadow: none;
     box-sizing: border-box;
+    @include font-size(14px);
 
     @include placeholder{
         color:$text-color;
@@ -49,7 +50,10 @@ textarea {
 .g-label{
     display: block;
     @include px2rem(margin-bottom, $project-line-height/3);
-    font-family:$font-medium;
+    font-family:$font-regular;
+    font-weight:400;
+    color:#080d0f;
+    @include font-size(14px);
 }
 .g-label__body{
     display: inline-block;
