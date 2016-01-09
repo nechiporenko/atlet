@@ -39,6 +39,12 @@ img.g-full-width{clear:both;display:block;width:100%;height:auto;margin:0 0 0 0;
 }
 .g-img-centered{
     @include img-centered;
+    @include transition(opacity .3s ease);
+    @include backface-visibility(hidden);
+
+    &:hover{
+        opacity:.8;
+    }
 }
 .g-video-wrap {
 	position: relative;

@@ -3,7 +3,7 @@
 .h-menu{
     @extend .g-container;
     padding:0;
-    background:$primary;
+    @include linear-gradient(to bottom, $primary, darken($primary, 5%));
     color:#fff;
     border-radius:$border-radius;
     display:none;

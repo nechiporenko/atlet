@@ -21,15 +21,27 @@
 }
 .b-news__item{
     display:block;
-    padding:7px 10px;
-    border-top:1px dashed $border-color;
-
-    &:first-child{
-        border-top:none;
+    padding:9px 10px 7px;
+    position:relative;
+    
+    &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0; left:6px; right:6px;
+        height:2px;
+        background:url(../img/border-h.png) center center repeat-x; 
     }
 
     @include media($large){
-        padding:7px 22px;
+        padding:9px 22px 7px;
+    }
+
+    &:first-child{
+        padding-top:7px;
+        &:before{
+            display:none;
+        }
     }
 }
 .b-news__link{

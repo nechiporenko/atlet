@@ -53,7 +53,7 @@ $loader:   '../img/loader.gif';
 		font-family: Arial;
 		font-weight: bold;
 		color: #fff;
-		//padding-top: 20px;
+
 		&.bx-default-pager a {
             @include font-size(12px);
 			background: #fff;
@@ -64,6 +64,8 @@ $loader:   '../img/loader.gif';
 			margin: 0 4px;
 			outline: 0;
 			border-radius: 6px;
+            position:relative;
+            z-index:100;
 			&:hover,
 			&.active,
 			&:focus {
