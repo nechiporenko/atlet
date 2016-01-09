@@ -40,6 +40,7 @@
 // Модальное окно
 // Корзина в хидере
 // Форма поиска в хидере
+// Слайдер новинок в сайдбаре
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -203,7 +204,22 @@ jQuery(document).ready(function ($) {
         });
         return method;
     })();
-    
+
+    //
+    // Слайдер новинок в сайдбаре
+    //---------------------------------------------------------------------------------------
+    function initSidebarSlider() {
+        var $slider = $('.js-sidebar-slider');
+        $slider.bxSlider({
+            pager: false,
+            nextSelector: '.b-latest__arrow--next',
+            prevSelector: '.b-latest__arrow--prev',
+            nextText: '<i class="icon-right-open-big"></i>',
+            prevText: '<i class="icon-left-open-big"></i>'
+        });
+    }
+    if($('.js-sidebar-slider').length){initSidebarSlider()}
+
     //
     // Если браузер не знает о плейсхолдерах в формах
     //---------------------------------------------------------------------------------------

@@ -9,6 +9,8 @@
 .page__lcol,
 .page__rcol,
 .page__main{
+    width:100%;
+    float:left;
     min-height:1px;
     box-sizing:border-box;
 }
@@ -24,11 +26,9 @@
 @include media($tablet){
     .page__lcol{
         width: 31.04%;
-        float:left;
     }
     .page__main{
         width: 68.96%;
-        float:left;
     }
 }
 
@@ -36,7 +36,6 @@
     .page__lcol,
     .page__rcol{
         width:23.077%;
-        float:left;
     }
     .page__main{
         width: 53.846%;

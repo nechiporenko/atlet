@@ -7,7 +7,7 @@ $loader:   '../img/loader.gif';
 //layout
 .bx-wrapper {
 	position: relative;
-    margin:0 auto 2*$project-line-height;
+    margin:0 auto;
 	padding: 0;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
@@ -105,8 +105,11 @@ $loader:   '../img/loader.gif';
 		height: 32px;
 		@include hide-text;
 		z-index: 100;
+        @include transition(opacity .3s ease);
+
 		&.disabled {
-			display: none;
+			//display: none;
+            opacity:.2;
 		}
 	}
 }
