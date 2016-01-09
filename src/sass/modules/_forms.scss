@@ -63,4 +63,30 @@ input[type="radio"] {
 
 
 
+/*Custom radio inputs*/
+input[type=radio].css-radio {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
 
+label.css-radio-label {
+    display:inline-block;
+    margin-bottom:0;
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    color:#080d0f;
+    @include font-size(14px);
+}
+
+
+input[type=radio].css-radio + label.css-radio-label {
+	padding-left:24px;
+	display:inline-block;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA2UExURQAAAACe7gCh8gCe7QCe7gCf8wCZ8gCe7gCe7wCe7gCd7wCe7wCe7gCe7gCd7QCe7gCe7QCf7RbPcDQAAAASdFJOUwD9E4FyFRTyq6JRT8/NU9CDghvJwfEAAABiSURBVAjXXY5XDsAgDEPNCA6rpfe/bAGVLv9YT45iA4C0QpZDMLWR0ftIpklG7fCgprNQcUkZ0GgXBjrsEbdiAf2Dnn8s7+OKg7JI+qtPUS9JRsPM1OTheY3MV72rZHVjzgklxwKtJxovWAAAAABJRU5ErkJggg==) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-radio:checked + label.css-radio-label{
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAqUExURQAAAACe7gCd8wCe7gCe7wCe7wCf8QCe7gCe7gCe7QCe7gCe7gCd8gCe7vU4ywgAAAANdFJOUwDzFGZRqyPOcoKi5RkC6J6AAAAAWUlEQVQI111PQQ7AMAgCrdU28f/fXethyyTxgBBEAJDlpC9BYZA7YpOjWFrtxfJwoQFTdQJGwTqjmUk9yoJvzLzgxHYwSjxQBDu9Zn7miuIb1Q61Gr3k74UHbNEDce4QuXEAAAAASUVORK5CYII=) left top no-repeat;
+    color:$primary;
+}

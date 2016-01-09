@@ -1,7 +1,7 @@
 ﻿@import "../../modules/_base.scss";
 /*Latest Products Sidebar Slider*/
 .b-latest{
-     margin-bottom:18px;
+     margin-bottom:20px;
 }
 .b-latest__title{
     @extend .b-category__title;
@@ -53,7 +53,7 @@
 }
 .b-latest__btn{
     display:inline-block;
-    padding:8px 25px;
+    padding:6px 25px;
     background:$primary;
     border-radius:$border-radius;
     color:#fff;

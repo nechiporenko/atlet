@@ -1,0 +1,51 @@
+﻿@import "../../modules/_base.scss";
+/*Vote Block*/
+.b-vote{
+    margin-bottom:20px;
+    display:none;
+    @include media($desktop){
+        display:block;
+    }
+}
+.b-vote__title{
+    @extend .b-category__title;
+}
+.b-vote__name{
+    @extend .b-category__name;
+}
+.b-vote__inner{
+    padding:15px 10px 10px;
+    border-left:1px solid $primary;
+    border-bottom:1px solid $primary;
+    border-right:1px solid $primary;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+
+    @include media($large){
+        padding:15px 5px 10px 22px;
+    }
+}
+
+.b-vote__subtitle{
+    display:block;
+    margin-bottom:10px;
+    font-family:$font-medium;
+    color:$primary;
+    @include font-size(14px);
+    letter-spacing:-.3px;
+}
+
+.b-vote__list{
+    @extend .g-clearlist;
+    margin-bottom:15px;
+}
+.b-vote__item{
+    margin-bottom:8px;
+}
+.b-vote__btn{
+    @extend .g-btn;
+    height:28px;
+    line-height:28px;
+    padding:0 20px;
+    margin:0;
+}
