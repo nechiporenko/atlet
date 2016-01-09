@@ -1,0 +1,46 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar News Block*/
+.b-news{
+    @extend .b-vote;
+}
+.b-news__title{
+    @extend .b-category__title;
+}
+.b-news__name{
+    @extend .b-category__name;
+}
+.b-news__inner{
+    border-left:1px solid $primary;
+    border-bottom:1px solid $primary;
+    border-right:1px solid $primary;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+}
+.b-news__list{
+    @extend .g-clearlist;
+}
+.b-news__item{
+    display:block;
+    padding:7px 10px;
+    border-top:1px dashed $border-color;
+
+    &:first-child{
+        border-top:none;
+    }
+
+    @include media($large){
+        padding:7px 22px;
+    }
+}
+.b-news__link{
+    display:block;
+    text-decoration:none;
+    color:#000;
+    @include font-size(12px);
+    line-height:1.25;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}

@@ -2,6 +2,7 @@
 /* Desktop Menu */
 .h-menu{
     @extend .g-container;
+    padding:0;
     background:$primary;
     color:#fff;
     border-radius:$border-radius;

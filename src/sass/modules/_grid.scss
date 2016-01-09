@@ -5,6 +5,11 @@
     @include outer-container();
     box-sizing:border-box;
     min-width:300px;
+    padding:0 10px;
+
+    @include media($large){
+        padding:0;
+    }
 }
 
 .g-row{

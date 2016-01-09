@@ -33,12 +33,7 @@
 
 .b-header__inner{
    @extend .g-container;
-   padding:0 10px;
    position:relative;
-
-   @include media($large){
-       padding:0;
-   }
 }
 
 
