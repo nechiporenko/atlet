@@ -65,14 +65,7 @@
     }
 }
 
-.b-promo__subtitle{
-    display:inline-block;
-    text-decoration:none;
-    padding:0 12px;
-    font-family:$font-bold;
-    color:#000;
-    @include font-size(15px);
-}
+
 
 .b-promo__inner{
     display:block;
@@ -208,6 +201,16 @@
     .b-promo__inner{
         padding:8px;
     }
+}
+
+.b-promo__subtitle{
+    display:inline-block;
+    text-decoration:none;
+    padding:0 12px;
+    font-family:$font-bold;
+    color:#000;
+    @include font-size(15px);
+    line-height:1.5;
 }
 
 .b-promo__col,
