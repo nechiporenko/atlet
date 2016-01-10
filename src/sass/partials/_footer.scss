@@ -1,3 +1,101 @@
 @import "../modules/base";
-
 /*Site Footer*/
+.b-footer{
+    padding-top:25px;
+    background:$title-color;
+    color:#fff;
+    font-family:$font-light;
+}
+.b-footer__inner{
+    @extend .g-container;
+}
+.b-footer__contacts,
+.b-footer__popular,
+.b-footer__social{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    min-height:1px;
+}
+
+.b-footer__social{
+    text-align:center;
+}
+
+@include media($tablet){
+    .b-footer__contacts,
+    .b-footer__popular{
+        width:(100%-$grid-gutter)/2;
+    }
+    .b-footer__popular{
+        margin-left:$grid-gutter;
+    }
+}
+
+@include media($desktop){
+    .b-footer__contacts,
+    .b-footer__popular,
+    .b-footer__social{
+        width:(100%-$grid-gutter*2)/3;
+    }
+    .b-footer__popular{
+        padding-left:50px;
+    }
+    .b-footer__social{
+        margin-left:$grid-gutter;
+        text-align:right;
+    }
+}
+
+@include media($large){
+    .b-footer__popular{
+        padding-left:75px;
+    }
+}
+
+.b-footer__title{
+    display:block;
+    margin-bottom:10px;
+    line-height:1;
+    color:#fff;
+    font-family:$font-bold;
+    @include font-size(14px);
+}
+.f-contacts,
+.f-popular,
+.f-social{
+    list-style-type:none;
+    padding:0;
+    margin-bottom:25px;
+}
+.f-contacts__item,
+.f-popular__item{
+    margin-bottom:10px;
+    @include font-size(14px);
+}
+
+.f-popular__link{
+    @extend .g-link;
+    color:#fff;
+}
+
+
+.f-social{
+    font-size:0;
+}
+.f-social__item{
+    display:inline-block;
+    @include font-size(24px);
+    margin-left:30px;
+
+    &:first-child{
+        margin-left:0;
+    }
+}
+
+.f-social__link{
+    @extend .b-header__social-link;
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+}

@@ -35,6 +35,18 @@
 }
 
 @font-face {
+	font-family:'GothamPro-Light';
+	src: url('../fonts/gotham/GothamPro-Light_gdi.eot');
+	src: url('../fonts/gotham/GothamPro-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/gotham/GothamPro-Light_gdi.woff') format('woff'),
+		url('../fonts/gotham/GothamPro-Light_gdi.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
 	font-family:'Panton-BlackitalicCaps';
 	src: url('../fonts/panton/Panton-BlackitalicCaps_gdi.eot');
 	src: url('../fonts/panton/Panton-BlackitalicCaps_gdi.eot?#iefix') format('embedded-opentype'),
