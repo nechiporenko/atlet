@@ -31,6 +31,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "2c71ee1c65e1992ba32d5ffc5ee7f337",
+      "css": "bag",
+      "code": 59412,
+      "src": "entypo"
+    },
+    {
       "uid": "c311c48d79488965b0fab7f9cd12b6b5",
       "css": "left-open",
       "code": 59407,
@@ -119,6 +125,24 @@
       "css": "odnoklassniki",
       "code": 59401,
       "src": "brandico"
+    },
+    {
+      "uid": "6ad86a953a5a76086c5568366863bbca",
+      "css": "torso",
+      "code": 59413,
+      "src": "elusive"
+    },
+    {
+      "uid": "23710230c21b4af140947e3604cc67a5",
+      "css": "comment",
+      "code": 59414,
+      "src": "elusive"
+    },
+    {
+      "uid": "68c7be0f4cab6b82d5725b1ba7cec4d6",
+      "css": "zoom-in",
+      "code": 59411,
+      "src": "elusive"
     }
   ]
 }

@@ -42,6 +42,7 @@
 // Форма поиска в хидере
 // Слайдер новинок в сайдбаре
 // Если браузер не знает о плейсхолдерах в формах
+// ie8
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -262,6 +263,15 @@ jQuery(document).ready(function ($) {
                 }
             });
         });
+    }
+
+    //
+    // ie8
+    //---------------------------------------------------------------------------------------
+    if ($html.hasClass('lt-ie9')) {
+        $('.products-list__item:nth-child(3n+1)').css('clear', 'left');
+        $('.products-list__item:nth-child(3n)').css('margin-right', 0);
+        $('input[type="radio"]').removeClass('css-radio').next('label').removeClass('css-radio-label');
     }
     
 });

@@ -1,3 +1,27 @@
 ﻿@import "../../modules/_base.scss";
 /*Breadcrumbs*/
-.breadcrumbs{}
+.breadcrumbs{
+    margin:0 0 15px 0;
+    padding:0;
+    @include font-size(12px);
+    line-height:1.2;
+    list-style-type:none;
+    color:$primary;
+}
+.breadcrumbs__item{
+    display:inline-block;
+    position:relative;
+
+    &:after{
+        content:'»';
+    }
+
+    &:last-child{
+        &:after{
+            display:none;
+        }
+    }
+}
+.breadcrumbs__link{
+    @extend .g-link;
+}

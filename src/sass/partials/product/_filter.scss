@@ -1,0 +1,33 @@
+﻿@import "../../modules/_base.scss";
+/*Product Filter*/
+.b-filter{
+    border-top:1px solid $border-color;
+    padding:8px 0;
+    @include font-size(12px);
+}
+
+.b-filter__label{
+    display:block;
+    height:30px;
+    line-height:30px;
+    @include font-size(12px);
+    color:$primary;
+}
+.b-filter__select{
+    @extend .g-select;
+    height:30px;
+    margin-bottom:15px;
+    @include font-size(12px);
+    color:$title-color;
+}
+
+@include media($tablet){
+    .b-filter__label,
+    .b-filter__select{
+        float:left;
+    }
+    .b-filter__select{
+        width:auto;
+        margin:0 15px 15px 5px;
+    }
+}

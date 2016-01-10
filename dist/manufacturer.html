@@ -149,10 +149,10 @@
                     
                     <!--HEADER LOGO & CAPTION START-->
                     <a href="index.html" class="b-header__logo">Атлет-маркет</a>
-                    <h1 class="b-header__caption">
+                    <span class="b-header__caption">
                         Спортивное
                         <span class="b-header__caption-word">питание</span>
-                    </h1>
+                    </span>
                     <!--/HEADER LOGO & CAPTION END-->
                 </div><!--/g-row-->
             </div><!--/b-header__inner-->
@@ -198,7 +198,533 @@
     <div class="page__inner">
         <!--MAIN COLUMN START-->
         <main class="page__main page__main--alt">
-            /////
+            <!--BREADCRUMBS START-->
+            <ol class="breadcrumbs">
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title">Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    MusclePharm
+                </li>
+            </ol>
+            <!--/BREADCRUMBS END-->
+
+            <article class="page__description">
+                <h1 class="g-title">MusclePharm</h1>
+                <p>Торговая компания MusсlePharm была создана относительно недавно, а именно в 2003 году, Бредом Пайат. Целью создателя компании было и есть, вот уже на протяжении десяти лет, создание качественных и безопасных товаров для профессиональных спортсменов, а также, людей, которые ведут активный образ жизни. За 10 лет своего существования, компания достигла небывалых высот. А именно стала популярной и любимой во всем мире.</p>
+                <p>Спортивное питание <b>MusсlePharm</b> купить может каждый, так как доступные цены только способствуют тому, чтобы все больше и больше людей, нуждающихся в качественных пищевых добавках обращали свое внимание именно на этот бренд. Над разработкой новых формул, а также созданием новых товаров работают именитые специалисты-разработчики этой сферы (такие как: Пол Диллет (Paul Dillet) по прозвищу Фрикенштейн, доктор Эрик Серрано (Dr. Eric Serrano)). Именно такой научный коллектив проводит многочисленные клинические исследования, тестирует безопасность и действенность спортивных пищевых добавок MusсlePharm. Состав, а также ингредиенты которые используются в каждом из продуктов этого бренда, тщательно проверяются. Ведь все это время, компания не отступает от своей главной цели: «Лучшее и безопасное!». Соблюдение всех мировых стандартов, а также наличие международных сертификатов качества, дают возможность поручиться за безопасность продукции. А многочисленная потребительская аудитория заставляет поверить в эффективность!</p>
+            </article>
+
+            <!--FILTER START-->
+            <div class="b-filter">
+                <div class="g-row">
+                    <label class="b-filter__label">Сортировка:</label>
+                    <select class="b-filter__select">
+                        <option>По умолчанию</option>
+                        <option>Наименование (А-->Я)</option>
+                        <option>Наименование (Я-->А)</option>
+                        <option>Цена (по возрастанию)</option>
+                        <option>Цена (по убыванию)</option>
+                    </select>
+                    <label class="b-filter__label">На странице:</label>
+                    <select class="b-filter__select">
+                        <option>36</option>
+                        <option>30</option>
+                        <option>50</option>
+                        <option>75</option>
+                        <option>100</option>
+                    </select>
+                </div>
+            </div>
+            <!--/FILTER END-->
+
+            <ul class="products-list">
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (200 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="371.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">371.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (400 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="571.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">571.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Ultra-Pure Amino Liquid (960 мл)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/100x100" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="321.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">321.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Alpha Amino Prototype 216 (120 капс)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="401.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">401.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Real Mass Probiotic Series (5400 г)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="1461.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">1461.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (200 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="371.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">371.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (400 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="571.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">571.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Ultra-Pure Amino Liquid (960 мл)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/100x100" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="321.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">321.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Alpha Amino Prototype 216 (120 капс)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="401.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">401.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Real Mass Probiotic Series (5400 г)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="1461.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">1461.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (200 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="371.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">371.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (400 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="571.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">571.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Ultra-Pure Amino Liquid (960 мл)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/100x100" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="321.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">321.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Alpha Amino Prototype 216 (120 капс)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="401.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">401.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Real Mass Probiotic Series (5400 г)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="1461.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">1461.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (200 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="371.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">371.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (400 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="571.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">571.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Ultra-Pure Amino Liquid (960 мл)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/100x100" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="321.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">321.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Alpha Amino Prototype 216 (120 капс)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="401.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">401.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">Real Mass Probiotic Series (5400 г)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x80" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="1461.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">1461.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+                <li class="products-list__item" itemscope="" itemtype="http://schema.org/Product">
+                    <meta itemprop="url" content="http://some/some-link-g.html">
+                    <figure class="products-list__thumb">
+                        <a href="product.html" class="products-list__link">
+                            <span class="products-list__title" itemprop="name">100% Beef Aminos (400 таб)</span>
+                            <div class="products-list__inner">
+                                <img src="http://placehold.it/80x120" class="products-list__img" alt="Product" itemprop="image" />
+                            </div>
+                        </a>
+                        <figcaption itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <meta itemprop="price" content="571.00">
+                            <meta itemprop="priceCurrency" content="UAH">
+                            <link itemprop="availability" href="http://schema.org/InStock" />
+                            <span class="products-list__price">571.00грн</span>
+                        </figcaption>
+                    </figure>
+                    <div class="products-list__order">
+                        <button type="button" class="products-list__btn" title="Купить" data-modal="#to-cart">
+                            <i class="flaticon-basket37"></i>
+                        </button>
+                        <button type="button" class="products-list__btn products-list__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                    </div>
+                </li>
+            </ul>
         </main>
         <!--/MAIN COLUMN END-->
 
@@ -481,7 +1007,7 @@
                         <a href="#" class="b-fabricator__link">MuscleTech</a>
                     </li>
                     <li class="b-fabricator__item">
-                        <a href="#" class="b-fabricator__link">MusсlePharm</a>
+                        <a href="#" class="b-fabricator__link current">MusсlePharm</a>
                     </li>
                     <li class="b-fabricator__item">
                         <a href="#" class="b-fabricator__link">NutraBolics</a>
@@ -675,6 +1201,54 @@
                 </div>
             </div>
             <button type="submit" class="g-btn">Жду звонка <i class="icon-right-open"></i></button>
+        </form>
+    </div>
+
+    <div class="modal" id="to-cart">
+        <div class="modal__content g-text-center">
+            <span class="g-title">Товар добавлен в корзину!</span>
+            <p>
+                <a href="cart.html" class="g-link"><i class="icon-bag"></i> Оформить заказ</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="fast-order">
+        <form class="modal__content">
+            <span class="g-title">Быстрый заказ</span>
+            <div class="g-row">
+                <figure class="g-col g-col--one-third g-text-center">
+                    <a href="product.html">
+                        <img src="http://placehold.it/100x100" alt="Product" />
+                    </a>
+                </figure>
+                <div class="g-col g-col--two-thirds">
+                    <a href="product.html" class="g-subtitle g-link">Real Mass Probiotic Series (5400 г)</a>
+                    <p><b>1461.00грн</b></p>
+                    <p>Real Mass Probiotic Series (5400 г) от Gaspari Nutrition — высокоэффективный гейнер, способствующий активному набору массы. В состав этого гейнера входит специальный комплекс, который помогает..</p>
+                </div>
+            </div>
+            <span class="g-subtitle">Заполните Ваши контактные данные</span>
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <label class="g-label"><i class="icon-torso"></i>Ваше имя</label>
+                    <input type="text" class="g-input" placeholder="Как Вас зовут?" required />
+                </div>
+                <div class="g-col g-col--one-half">
+                    <label class="g-label"><i class="icon-phone"></i>Ваш телефон</label>
+                    <input type="text" class="g-input" placeholder="Контактный телефон" required />
+                </div>
+            </div>
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <label class="g-label"><i class="icon-comment"></i>Комментарий</label>
+                    <input type="text" class="g-input" placeholder="Комментарий к заказу" />
+                </div>
+                <div class="g-col g-col--one-half">
+                    <label class="g-label"><i class="icon-bag"></i>Количество товара</label>
+                    <input type="number" class="g-input" value="1" required min="1" />
+                </div>
+            </div>
         </form>
     </div>
     <!--/MODAL WINDOWS END-->

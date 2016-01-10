@@ -17,11 +17,11 @@ textarea {
 .g-select,
 .g-textarea{
     width:100%;
-    @include px2rem(padding, 6px 10px);//The 6px vertically centers text on FF, ignored by Webkit
+    @include px2rem(padding, 6px 8px);//The 6px vertically centers text on FF, ignored by Webkit
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius:$border-radius;
-    color:$text-color;
+    color:$text-color-dark;
     box-shadow: none;
     box-sizing: border-box;
     @include font-size(14px);

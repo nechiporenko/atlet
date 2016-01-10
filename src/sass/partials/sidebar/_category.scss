@@ -75,6 +75,11 @@
     &:active{
         color:$primary;
     }
+
+    &.current{
+        color:$primary;
+        cursor:default;
+    }
 }
 
 .b-category__link-text{
