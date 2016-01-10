@@ -16,7 +16,7 @@
 .b-filter__select{
     @extend .g-select;
     height:30px;
-    margin-bottom:15px;
+    margin-bottom:8px;
     @include font-size(12px);
     color:$title-color;
 }
@@ -28,6 +28,32 @@
     }
     .b-filter__select{
         width:auto;
-        margin:0 15px 15px 5px;
+        margin:0 15px 8px 5px;
+    }
+}
+
+.b-filter__list{
+    list-style-type:none;
+    padding:8px 0;
+    margin:0;
+    border-top:1px solid $border-color;
+}
+.b-filter__item{
+    display:block;
+    margin:4px 0;
+    @include font-size(12px);
+
+    @include media($mobile){
+        display:inline-block;
+        margin-right:5px;
+    }
+}
+.b-filter__link{
+    text-decoration:none;
+    color:$title-color;
+
+    &:hover,
+    &:active{
+        color:$primary;
     }
 }
