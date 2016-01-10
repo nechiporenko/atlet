@@ -15,20 +15,13 @@
     box-sizing:border-box;
 }
 
-.page__main{
-    padding:0 10px;
-
-    @include media($large){
-        padding:0 30px;
-    }
-}
-
 @include media($tablet){
     .page__lcol{
         width: 31.04%;
     }
     .page__main{
         width: 68.96%;
+        padding:0 10px;
     }
 }
 
@@ -39,6 +32,12 @@
     }
     .page__main{
         width: 53.846%;
+    }
+}
+
+@include media($large){
+    .page__main{
+        padding:0 30px;
     }
 }
 
@@ -53,7 +52,7 @@
     font-weight:400;
 }
 .page__description{
-    margin:0 -10px 20px;
+    margin:0 0 20px;
     @include font-size(12px);
     line-height:1.25;
 
@@ -64,10 +63,6 @@
     b, strong{
         font-family:$font-medium;
         font-weight:400;
-    }
-
-    @include media($tablet){
-        margin:0 0 20px;
     }
 }
 

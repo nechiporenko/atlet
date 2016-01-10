@@ -1,23 +1,18 @@
 ﻿@import "../../modules/_base.scss";
 /*Promo Blocks*/
 .b-promo{
-    margin:0 -10px 20px;
+    margin:0 0 20px;
     border:1px solid $primary;
     border-radius:$border-radius;
-    border-top-width:8px;
-
-
-    @include media($tablet){
-        margin:0 0 20px;
-    }
+    @include px2rem(border-top-width, 8px);
 }
 .b-bromo__title{}
 .b-promo__name{
     display:inline-block;
     padding:0 10px;
-    min-width:160px;
-    height:37px;
-    line-height:29px;
+    @include px2rem(min-width, 160px);
+    @include px2rem(height, 37px);
+    @include px2rem(line-height, 29px);
     border-bottom-right-radius:12px;
     white-space:nowrap;
     color:#fff;
@@ -190,7 +185,7 @@
     border-color:$primary-alt;
 
     .b-promo__name{
-        min-width:158px;
+        @include px2rem(min-width, 158px);
         @include linear-gradient(to bottom, $primary-alt, darken($primary-alt, 5%));
 
         &:before{
@@ -223,7 +218,7 @@
     text-align:center;
 }
 .b-promo__col{
-    height:168px;
+    height:158px;
     margin:0;
 }
 @include media($desktop){
@@ -231,9 +226,9 @@
         width:30%;
     }
     .b-promo__col--last{
-        height:168px;
+        height:158px;
         width:70%;
-        padding-left:12px;
+        padding-left:4px;
     }
 }
 
@@ -264,6 +259,6 @@
 
     @include media($desktop){
         position:absolute;
-        bottom:8px; right:8px;
+        bottom:4px; right:0;
     }
 }

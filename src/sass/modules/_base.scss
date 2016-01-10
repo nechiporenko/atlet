@@ -61,6 +61,14 @@ $font-caps:'Panton-BlackitalicCaps';
     }
 }
 
+@mixin border-box(){
+    border-left:1px solid $primary;
+    border-bottom:1px solid $primary;
+    border-right:1px solid $primary;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+}
+
 
 @mixin px2rem($property, $values) {
   // Create a couple of empty lists as output buffers.

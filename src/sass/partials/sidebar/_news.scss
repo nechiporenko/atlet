@@ -10,11 +10,7 @@
     @extend .b-category__name;
 }
 .b-news__inner{
-    border-left:1px solid $primary;
-    border-bottom:1px solid $primary;
-    border-right:1px solid $primary;
-    border-bottom-left-radius:$border-radius;
-    border-bottom-right-radius:$border-radius;
+    @extend .g-border-box;
 }
 .b-news__list{
     @extend .g-clearlist;

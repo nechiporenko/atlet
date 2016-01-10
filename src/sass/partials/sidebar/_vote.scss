@@ -15,11 +15,7 @@
 }
 .b-vote__inner{
     padding:15px 10px 10px;
-    border-left:1px solid $primary;
-    border-bottom:1px solid $primary;
-    border-right:1px solid $primary;
-    border-bottom-left-radius:$border-radius;
-    border-bottom-right-radius:$border-radius;
+    @extend .g-border-box;
 
     @include media($large){
         padding:15px 5px 10px 22px;
