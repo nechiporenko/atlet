@@ -128,7 +128,7 @@
 .b-promo__caption{
     display:block;
     min-height:24px;
-    color:#080d0f;
+    color:$text-color-dark;
     @include font-size(12px);
     margin-bottom:5px;
 }
@@ -149,7 +149,7 @@
 
 .b-promo__oldprice{
     display:block;
-    color:#080d0f;
+    color:$text-color-dark;
     @include font-size(12px);
     text-decoration:line-through;
 }
@@ -163,7 +163,7 @@
 
 .b-promo__price{
     display:block;
-    color:#080d0f;
+    color:$text-color-dark;
     @include font-size(12px);
 }
 
@@ -234,7 +234,7 @@
 
 .b-promo__description{
     margin:15px 0;
-    color:#080d0f;
+    color:$text-color-dark;
     @include font-size(12px);
     line-height:1.25;
     text-align:left;

@@ -1,0 +1,66 @@
+﻿@import "../../modules/_base.scss";
+/*Recommend Sidebar Block*/
+.b-recommend{
+     @extend .b-vote;
+}
+.b-recommend__title{
+    @extend .b-category__title;
+     @include linear-gradient(to bottom, $primary-alt, darken($primary-alt, 5%));
+}
+.b-recommend__name{
+    @extend .b-category__name;
+}
+.b-recommend__list{
+    @extend .g-clearlist;
+    border-left:1px solid $primary-alt;
+    border-bottom:1px solid $primary-alt;
+    border-right:1px solid $primary-alt;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+}
+.b-recommend__item{
+    @extend .b-news__item;
+    padding:12px 10px 10px;
+
+    @include media($large){
+        padding:12px 22px 10px;
+    }
+     &:first-child{
+        padding-top:10px;
+    }
+}
+.b-reccomend__link{
+    display:block;
+    text-decoration:none;
+    color:$text-color-dark;
+    @extend .g-clearfix;
+}
+.b-recommend__thumb{
+    float:left;
+    margin:0;
+    width:70px; height:70px;
+    position:relative;
+}
+.b-recommend__img{
+    @extend .g-img-centered;
+}
+.b-recommend__description{
+    margin-left:75px;
+    height:70px;
+}
+.b-recommend__content{
+    margin:0;
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+.b-recommend__caption{
+    display:block;
+    margin-bottom:5px;
+    @include font-size(12px);
+}
+.b-recommend__price{
+    @include font-size(16px);
+    color:#000;
+    font-family:$font-medium;
+}
