@@ -23,6 +23,11 @@
         width: 68.96%;
         padding:0 10px;
     }
+
+    .page__main--alt{
+        float:right;
+    }
+
 }
 
 @include media($desktop){
@@ -33,6 +38,17 @@
     .page__main{
         width: 53.846%;
     }
+
+    .page__lcol--alt{
+        margin-left: -76.923%;
+    }
+    .page__main--alt{
+        float:left;
+        margin-left: 23.077%;
+    }
+    .page__rcol--alt{
+        float:right;
+    }
 }
 
 @include media($large){
@@ -40,6 +56,8 @@
         padding:0 30px;
     }
 }
+
+
 
 /*Page SEO Blocks*/
 .p-title{
