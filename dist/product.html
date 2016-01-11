@@ -197,7 +197,7 @@
 
     <div class="page__inner">
         <!--MAIN COLUMN START-->
-        <main class="page__main page__main--alt">
+        <main class="page__main page__main--alt" itemscope="" itemtype="http://schema.org/Product">
             <!--BREADCRUMBS START-->
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -216,30 +216,35 @@
             </ol>
             <!--/BREADCRUMBS END-->
 
-            <h1 class="g-title">100% Whey Gold Standard (2273 г)</h1>
+            <h1 class="g-title" itemprop="name">100% Whey Gold Standard (2273 г)</h1>
             <!--PRODUCT BLOCK START-->
             <div class="b-product">
                 <figure class="b-product__col b-product__col--thumb">
-                    <a href="http://placehold.it/500x500" class="b-product__imglink">
-                        <img src="http://placehold.it/180x228" class="b-product__img" alt="Product" />
+                    <a href="http://placehold.it/500x500" class="b-product__imglink js-lightbox" data-caption="100% Whey Gold Standard (2273 г)">
+                        <img src="http://placehold.it/180x228" class="b-product__img" alt="Product" itemprop="image" />
                     </a>
                 </figure>
                 <div class="b-product__col">
                     <div class="b-product__description">
-                        Производитель: <a href="#" class="b-product__strong">Optimum Nutrion</a>
+                        Производитель: <a href="#" class="b-product__strong" itemprop="manufacturer">Optimum Nutrion</a>
                         <br />
-                        Модель: <span class="b-product__strong">19002</span>
+                        Модель: <span class="b-product__strong" itemprop="model">19002</span>
                         <br />
                         Наличие: <span class="b-product__strong">В наличии</span>
                     </div>
-                    <div class="b-product__price">
+                    <div class="b-product__price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="1475.00">
+                        <meta itemprop="priceCurrency" content="UAH">
+                        <link itemprop="availability" href="http://schema.org/InStock">
                         <span class="b-product__tag">ЦЕНА: 1475.00грн</span>
                         <button type="button" class="b-product__cheap" data-modal="#find-cheap">Нашли дешевле?</button>
                     </div>
 
                     <ul class="b-rating">
-                        <li class="b-rating__item">
+                        <li class="b-rating__item" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
                             <img src="img/stars-0.png" class="b-rating__img" alt="Нет отзывов" />
+                            <meta itemprop="ratingValue" content="2" />
+                            <meta itemprop="reviewCount" content="2" />
                         </li>
                         <li class="b-rating__item">
                             <button type="button" class="b-rating__btn">Рейтинг 0/5</button>
@@ -248,11 +253,11 @@
                             <button type="button" class="b-rating__btn">Написать отзыв</button>
                         </li>
                     </ul>
-                    
+
                     <form class="b-product__order">
                         <div class="b-product__order-col">
                             <label class="b-product__label">Количество:</label>
-                            <input type="text" class="b-product__input" value="1" min="1" required />
+                            <input type="text" class="b-product__input" value="1" required />
                         </div>
                         <div class="b-product__order-col">
                             <button type="submit" class="b-product__btn" data-modal="#to-cart"><i class="flaticon-basket37"></i></button>
@@ -265,9 +270,9 @@
                 </div>
             </div>
             <!--/PRODUCT BLOCK END-->
-            
 
-            
+
+
         </main>
         <!--/MAIN COLUMN END-->
 
