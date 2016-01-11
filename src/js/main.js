@@ -7,6 +7,7 @@
 // Форма поиска в хидере
 // Слайдер новинок в сайдбаре
 // Лайтбокс в карточке товара
+// Вкладки в карточке товара
 // Если браузер не знает о плейсхолдерах в формах
 // ie8
 
@@ -208,6 +209,51 @@ jQuery(document).ready(function ($) {
     $('.js-lightbox').lightbox({
         'blur':false
     });
+
+    //
+    // Вкладки в карточке товара
+    //---------------------------------------------------------------------------------------
+    function initTabs() {
+        //старт - спрячем лишние вкладки, оставим текущую (по умолчанию - первую)
+        var $tabs = $('.js-tabs');
+        $('.b-tabs__content').hide();
+        $tabs.each(function () {
+            var $current = $(this).find('a.current');
+            if (!$current.length) { $(this).find('a:first').addClass('current'); }
+            var target = $(this).find('a.current').attr('href');
+            $(target).show();
+        });
+
+        //клик по вкладкам
+        $tabs.on('click', 'a[href^="#"]', function (e) {
+            e.preventDefault();
+            var $btn = $(this).parents('ul').find('a');
+            var tab_next = $(this).attr('href');
+            var tab_current = $btn.filter('.current').attr('href');
+            $(tab_current).hide();
+            $btn.removeClass('current');
+            $(this).addClass('current');
+            $(tab_next).show();
+            history.pushState(null, null, window.location.search + $(this).attr('href'));
+            return false;
+        });
+
+        //Откроем нужную вкладку по ссылке
+        var wantedTag = window.location.hash;
+        if (wantedTag != "") {
+            try {
+                var $allTabs = $tabs.find("a[href^=" + wantedTag + "]").parents('ul').find('a');
+                var defaultTab = $allTabs.filter('.current').attr('href');
+                $(defaultTab).hide();
+                $allTabs.removeClass('current');
+                $tabs.find("a[href^=" + wantedTag + "]").addClass('current');
+                $("#" + wantedTag.replace('#', '')).show();
+            } catch (e) {
+                // 
+            }
+        }
+    }
+    if($('.js-tabs').length){initTabs()}
 
     //
     // Если браузер не знает о плейсхолдерах в формах

@@ -41,8 +41,8 @@
 	width: 100%;
 	text-align: center;
 	z-index: 9998;
-	background: #000;
-	background: rgba(0,0,0,0.7);
+	background: $primary;
+	background: rgba($primary,.7);
 }
 
 .lightbox__caption p {
