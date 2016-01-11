@@ -51,4 +51,5 @@
 }
 .b-tabs__content{
     @extend .g-clearfix;
+    @extend .page__description;
 }
