@@ -19,6 +19,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "3db5347bd219f3bce6025780f5d9ef45",
+      "css": "tag",
+      "code": 59415,
+      "src": "fontawesome"
+    },
+    {
       "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
       "css": "phone",
       "code": 59392,
@@ -29,6 +35,12 @@
       "css": "copyright",
       "code": 59405,
       "src": "fontawesome"
+    },
+    {
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "code": 59416,
+      "src": "entypo"
     },
     {
       "uid": "2c71ee1c65e1992ba32d5ffc5ee7f337",

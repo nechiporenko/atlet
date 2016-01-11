@@ -1,4 +1,5 @@
 ﻿@import "../modules/_base.scss";
 
-@import "product/_filter.scss";
-@import "product/_products-list.scss";
+@import "product/_filter.scss";//Фильтры
+@import "product/_products-list.scss";//Каталог товаров
+@import "product/_single-product.scss";//Карточка товара

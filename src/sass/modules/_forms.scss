@@ -54,6 +54,10 @@ textarea {
     font-weight:400;
     color:$text-color-dark;
     @include font-size(14px);
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        color:$primary;
+    }
 }
 .g-label__body{
     display: inline-block;
