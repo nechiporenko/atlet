@@ -132,3 +132,11 @@
         text-decoration:underline;
     }
 }
+
+.h-cart__empty{
+    padding:30px 0;
+    text-align:center;
+    @include font-size(16px);
+    color:$text-color-dark;
+    font-family:$font-medium;
+}
