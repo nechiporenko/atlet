@@ -1,0 +1,152 @@
+﻿@import "../../modules/_base.scss";
+/*Cart (Order Step 1)*/
+.b-cart{
+    margin-bottom:20px;
+}
+
+.b-cart__wrap{
+    width:100%;
+    overflow-y:hidden;
+    overflow-x:auto;
+    border-left:1px solid $border-color;
+    border-right:1px solid $border-color;
+    box-sizing:border-box;
+}
+.b-cart__table{
+    margin:0;
+    @extend .g-full-width;
+    @include font-size(12px);
+    
+    th{
+        padding:6px 3px;
+        color:$title-color;
+        white-space:nowrap;
+        background:#e3e4e8;
+
+        &.b-cart__td{
+            width:144px;
+            text-align:left;
+        }
+    }
+    td{
+        padding:10px 3px;
+        border-bottom:1px solid $border-color;
+        color:$primary;
+        line-height:1.125;
+
+        &.b-cart__action{
+            text-align:center;
+            white-space:nowrap;
+        }
+    }
+
+    th,
+    td{
+        &:last-child{
+            padding-right:8px;
+        }
+    }
+}
+.b-cart__table--total{
+    td{
+        text-align:right;
+
+        &:first-child{
+            width:80%;
+            color:$title-color;
+            font-family:$font-medium;
+        }
+    }
+}
+
+.b-cart__count{
+    @extend .g-input;
+    margin:0;
+    width:30px;
+    height:24px;
+    color:$title-color;
+    @include font-size(12px);
+    text-align:center;
+}
+.b-cart__refresh{
+    margin:0;
+    padding:0;
+    border:none;
+    background:none;
+    outline:0;
+    color:$primary-success;
+    @include font-size(15px);
+
+    &:hover,
+    &:focus{
+        color:darken($primary-success, 10%);
+    }
+}
+.b-cart__remove{
+    @include font-size(14px);
+    text-decoration:none;
+    color:#ed5565;
+
+    &:hover,
+    &:active{
+        color:darken(#ed5565, 20%);
+    }
+}
+
+
+.b-cart-addon{
+    border:1px solid $border-color;
+}
+.b-cart-addon__title{
+    padding:6px 10px;
+    @include font-size(12px);
+    color:$title-color;
+    background:#e3e4e8;
+}
+.b-cart-addon__inner{
+    padding:0 10px;
+    @include font-size(12px);
+    color:$title-color;
+    line-height:1.25;
+
+    .css-radio-label{
+        @include font-size(12px);
+    }
+
+    p{
+        margin:15px 0;
+    }
+}
+.b-cart__tab{
+    display:none;//покажем скриптом
+    padding:20px 10px;
+    border-top:1px solid $border-color;
+    @include font-size(12px);
+    color:$title-color;
+
+    .g-label{
+        @include font-size(12px);
+    }
+    .g-btn{
+        margin-bottom:0;
+    }
+}
+
+.b-cart__choice{
+    padding-top:15px;
+    text-align:center;
+
+    .g-btn{
+        width:100%;
+    }
+
+    @include media($tablet){
+        text-align:left;
+        .g-btn{
+            width:auto;
+        }
+        .g-btn--alt{
+            float:right;
+        }
+    }
+}

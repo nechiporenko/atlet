@@ -1,0 +1,90 @@
+﻿@import "../../modules/_base.scss";
+/*Order steps indicator*/
+.b-steps{
+    list-style-type:none;
+    padding:15px 0 0 0;
+    margin-bottom:15px;
+    border-top:1px solid $border-color;
+    border-bottom:1px solid $border-color;
+    font-size:0;
+    text-align:center;
+    position:relative;
+
+    &:before{
+        content:'';
+        display:none;
+        height:10px;
+        background:#e1e4e9;
+        position:absolute;
+        top:31px;
+        left:50%;
+        width:360px;
+        margin-left:-180px;
+        z-index:-1;
+    }
+}
+.b-steps__item{
+    display:block;
+    margin-bottom:22px;
+    @include font-size(12px);
+    position:relative;
+}
+
+.b-steps__num{
+    display:inline-block;
+    margin-bottom:10px;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    border-radius:50%;
+    background:#e1e4e9;
+    color:#afb4bc;
+    font-family:$font-bold;
+    @include font-size(18px);
+    text-align:center;
+    position:relative;
+    z-index:1;
+
+    &.current{
+        background:$primary-alt;
+        color:#fff;
+    }
+}
+
+
+
+.b-steps__name{
+    display:block;
+    color:$title-color;
+}
+
+@include media($small){
+    .b-steps{
+        padding:20px 0;
+        &:before{
+            display:block;
+        }
+    }
+    .b-steps__item{
+        display:inline-block;
+        margin:0;
+    }
+    
+    .b-steps__item--center{
+        margin-left:80px;
+        margin-right:80px;
+    }
+}
+
+@include media($large){
+    .b-steps{
+        &:before{
+            width:440px;
+            margin-left:-220px;
+        }
+    }
+    .b-steps__item--center{
+        margin-left:120px;
+        margin-right:120px;
+    }
+}

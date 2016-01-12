@@ -8,6 +8,7 @@
 // Слайдер новинок в сайдбаре
 // Лайтбокс & zoom в карточке товара
 // Вкладки в карточке товара
+// Вкладки на странице Корзины
 // Если браузер не знает о плейсхолдерах в формах
 // ie8
 
@@ -243,7 +244,7 @@ jQuery(document).ready(function ($) {
             $(tab_current).hide();
             $btn.removeClass('current');
             $(this).addClass('current');
-            $(tab_next).show();
+            $(tab_next).fadeIn();
             history.pushState(null, null, window.location.search + $(this).attr('href'));
             return false;
         });
@@ -270,7 +271,20 @@ jQuery(document).ready(function ($) {
             }
         }
     }
-    if($('.js-tabs').length){initTabs()}
+    if ($('.js-tabs').length) { initTabs() }
+
+    //
+    // Вкладки на странице Корзины
+    //---------------------------------------------------------------------------------------
+    function initCartTabs() {
+        var $rtab = $('.b-cart__tab');
+        $('.js-rtab').on('change', function () {
+            var target = $(this).val();
+            $rtab.hide();
+            $(target).fadeIn();
+        });
+    }
+    if($('.js-rtab').length){initCartTabs()}
 
     //
     // Если браузер не знает о плейсхолдерах в формах

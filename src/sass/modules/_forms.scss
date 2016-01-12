@@ -17,7 +17,6 @@ textarea {
 .g-select,
 .g-textarea{
     width:100%;
-    @include px2rem(padding, 6px 8px);//The 6px vertically centers text on FF, ignored by Webkit
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius:$border-radius;
@@ -40,11 +39,13 @@ textarea {
 
 .g-input,
 .g-select{
-    @include px2rem(height, 38px);
+    @include px2rem(height, 36px);
+    @include px2rem(padding, 0 8px);
 }
 
 .g-textarea{
     @include px2rem(min-height, $project-line-height*5);
+    @include px2rem(padding, 6px 8px);
 }
 
 .g-label{
@@ -78,6 +79,7 @@ input[type=radio].css-radio {
 
 label.css-radio-label {
     display:inline-block;
+    min-height:14px;
     margin-bottom:0;
     -webkit-touch-callout: none;
     @include user-select(none);
