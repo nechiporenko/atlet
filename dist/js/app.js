@@ -297,6 +297,13 @@ jQuery(document).ready(function ($) {
             return false;
         });
 
+        //Альтернативное открытие вкладки (кнопка с аттрибутом data-tab="id вкладки" в контенте)
+        $('.page__main').on('click', '[data-tab]', function () {
+            var target = $(this).data('tab'),
+                $el = $tabs.find('a[href^=' + target + ']');
+            $el.trigger('click');
+        });
+
         //Откроем нужную вкладку по ссылке
         var wantedTag = window.location.hash;
         if (wantedTag != "") {

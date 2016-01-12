@@ -34,6 +34,7 @@
     font-style:italic;
     font-weight:normal;
     @include font-size(16px);
+    line-height:1.1;
     text-shadow:2px 2px 5px rgba(#000, .5);
     color:#fff;
 
