@@ -48,10 +48,10 @@
 .b-latest__img{
     @extend .g-img-centered;
 }
-.b-latest__btn{
+.b-latest__tag{
     display:inline-block;
     padding:6px 25px;
-    background:$primary;
+    @include linear-gradient(to bottom, $primary, darken($primary, 5%));
     border-radius:$border-radius;
     color:#fff;
     @include font-size(16px);

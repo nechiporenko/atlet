@@ -40,6 +40,13 @@
  */
 !function (a) { "use strict"; a.fn.lightbox = function (b) { var c = { margin: 50, nav: !0, blur: !0, minSize: 0 }, d = { items: [], lightbox: null, image: null, current: null, locked: !1, caption: null, init: function (b) { d.items = b; var e = "lightbox-" + Math.floor(1e5 * Math.random() + 1); d.lightbox || (d.lightbox = a("body").find(".bodyGlobalLightbox"), 0 === d.lightbox.length && (a("body").append('<div id="' + e + '" class="lightbox bodyGlobalLightbox" style="display:none;"><a href="#" class="lightbox__close lightbox__button"></a><a href="#" class="lightbox__nav lightbox__nav--prev lightbox__button"></a><a href="#" class="lightbox__nav lightbox__nav--next lightbox__button"></a><div href="#" class="lightbox__caption"><p></p></div></div>'), d.lightbox = a("#" + e)), d.caption = a(".lightbox__caption", d.lightbox)), d.items.length > 1 && c.nav ? a(".lightbox__nav", d.lightbox).show() : a(".lightbox__nav", d.lightbox).hide(), d.bindEvents() }, loadImage: function () { c.blur && a("body").addClass("blurred"), a("img", d.lightbox).remove(), d.lightbox.fadeIn("fast").append('<span class="lightbox__loading"></span>'); var b = a('<img src="' + a(d.current).attr("href") + '" draggable="false">'); a(b).load(function () { a(".lightbox__loading").remove(), d.lightbox.append(b), d.image = a("img", d.lightbox).hide(), d.resizeImage(), d.setCaption() }) }, setCaption: function () { var b = a(d.current).data("caption"); b && b.length > 0 ? (d.caption.fadeIn(), a("p", d.caption).text(b)) : d.caption.hide() }, resizeImage: function () { var b, e, f, g, h; e = a(window).height() - c.margin, f = a(window).outerWidth(!0) - c.margin, d.image.width("").height(""), g = d.image.height(), h = d.image.width(), h > f && (b = f / h, h = f, g = Math.round(g * b)), g > e && (b = e / g, g = e, h = Math.round(h * b)), d.image.width(h).height(g).css({ top: (a(window).height() - d.image.outerHeight()) / 2 + "px", left: (a(window).width() - d.image.outerWidth()) / 2 + "px" }).show(), d.locked = !1 }, getCurrentIndex: function () { return a.inArray(d.current, d.items) }, next: function () { return d.locked ? !1 : (d.locked = !0, void (d.getCurrentIndex() >= d.items.length - 1 ? a(d.items[0]).click() : a(d.items[d.getCurrentIndex() + 1]).click())) }, previous: function () { return d.locked ? !1 : (d.locked = !0, void (d.getCurrentIndex() <= 0 ? a(d.items[d.items.length - 1]).click() : a(d.items[d.getCurrentIndex() - 1]).click())) }, bindEvents: function () { a(d.items).click(function (b) { if (!d.lightbox.is(":visible") && (a(window).width() < c.minSize || a(window).height() < c.minSize)) return void a(this).attr("target", "_blank"); var e = a(this)[0]; b.preventDefault(), d.current = e, d.loadImage(), a(document).on("keydown", function (a) { 27 === a.keyCode && d.close(), 39 === a.keyCode && d.next(), 37 === a.keyCode && d.previous() }) }), d.lightbox.on("click", function (a) { this === a.target && d.close() }), a(d.lightbox).on("click", ".lightbox__nav--prev", function () { return d.previous(), !1 }), a(d.lightbox).on("click", ".lightbox__nav--next", function () { return d.next(), !1 }), a(d.lightbox).on("click", ".lightbox__close", function () { return d.close(), !1 }), a(window).resize(function () { d.image && d.resizeImage() }) }, close: function () { a(document).off("keydown"), a(d.lightbox).fadeOut("fast"), a("body").removeClass("blurred") } }; a.extend(c, b), d.init(this) } }(jQuery);
 
+/*!
+	Zoom 1.7.14
+	license: MIT
+	http://www.jacklmoore.com/zoom
+*/
+(function ($) { var defaults = { url: false, callback: false, target: false, duration: 120, on: "mouseover", touch: true, onZoomIn: false, onZoomOut: false, magnify: 1 }; $.zoom = function (target, source, img, magnify) { var targetHeight, targetWidth, sourceHeight, sourceWidth, xRatio, yRatio, offset, $target = $(target), position = $target.css("position"), $source = $(source); $target.css("position", /(absolute|fixed)/.test(position) ? position : "relative"); $target.css("overflow", "hidden"); img.style.width = img.style.height = ""; $(img).addClass("zoomImg").css({ position: "absolute", top: 0, left: 0, opacity: 0, width: img.width * magnify, height: img.height * magnify, border: "none", maxWidth: "none", maxHeight: "none" }).appendTo(target); return { init: function () { targetWidth = $target.outerWidth(); targetHeight = $target.outerHeight(); if (source === $target[0]) { sourceWidth = targetWidth; sourceHeight = targetHeight } else { sourceWidth = $source.outerWidth(); sourceHeight = $source.outerHeight() } xRatio = (img.width - targetWidth) / sourceWidth; yRatio = (img.height - targetHeight) / sourceHeight; offset = $source.offset() }, move: function (e) { var left = e.pageX - offset.left, top = e.pageY - offset.top; top = Math.max(Math.min(top, sourceHeight), 0); left = Math.max(Math.min(left, sourceWidth), 0); img.style.left = left * -xRatio + "px"; img.style.top = top * -yRatio + "px" } } }; $.fn.zoom = function (options) { return this.each(function () { var settings = $.extend({}, defaults, options || {}), target = settings.target || this, source = this, $source = $(source), $target = $(target), img = document.createElement("img"), $img = $(img), mousemove = "mousemove.zoom", clicked = false, touched = false, $urlElement; if (!settings.url) { $urlElement = $source.find("img"); if ($urlElement[0]) { settings.url = $urlElement.data("src") || $urlElement.attr("src") } if (!settings.url) { return } } (function () { var position = $target.css("position"); var overflow = $target.css("overflow"); $source.one("zoom.destroy", function () { $source.off(".zoom"); $target.css("position", position); $target.css("overflow", overflow); $img.remove() }) })(); img.onload = function () { var zoom = $.zoom(target, source, img, settings.magnify); function start(e) { zoom.init(); zoom.move(e); $img.stop().fadeTo($.support.opacity ? settings.duration : 0, 1, $.isFunction(settings.onZoomIn) ? settings.onZoomIn.call(img) : false) } function stop() { $img.stop().fadeTo(settings.duration, 0, $.isFunction(settings.onZoomOut) ? settings.onZoomOut.call(img) : false) } if (settings.on === "grab") { $source.on("mousedown.zoom", function (e) { if (e.which === 1) { $(document).one("mouseup.zoom", function () { stop(); $(document).off(mousemove, zoom.move) }); start(e); $(document).on(mousemove, zoom.move); e.preventDefault() } }) } else if (settings.on === "click") { $source.on("click.zoom", function (e) { if (clicked) { return } else { clicked = true; start(e); $(document).on(mousemove, zoom.move); $(document).one("click.zoom", function () { stop(); clicked = false; $(document).off(mousemove, zoom.move) }); return false } }) } else if (settings.on === "toggle") { $source.on("click.zoom", function (e) { if (clicked) { stop() } else { start(e) } clicked = !clicked }) } else if (settings.on === "mouseover") { zoom.init(); $source.on("mouseenter.zoom", start).on("mouseleave.zoom", stop).on(mousemove, zoom.move) } if (settings.touch) { $source.on("touchstart.zoom", function (e) { e.preventDefault(); if (touched) { touched = false; stop() } else { touched = true; start(e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]) } }).on("touchmove.zoom", function (e) { e.preventDefault(); zoom.move(e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]) }) } if ($.isFunction(settings.callback)) { settings.callback.call(img) } }; img.src = settings.url }) }; $.fn.zoom.defaults = defaults })(window.jQuery);
+
 // Application Scripts:
 
 
@@ -48,7 +55,7 @@
 // Корзина в хидере
 // Форма поиска в хидере
 // Слайдер новинок в сайдбаре
-// Лайтбокс в карточке товара
+// Лайтбокс & zoom в карточке товара
 // Вкладки в карточке товара
 // Если браузер не знает о плейсхолдерах в формах
 // ie8
@@ -246,11 +253,21 @@ jQuery(document).ready(function ($) {
     if ($('.js-slider').length) { initMainSlider() }
 
     //
-    // Лайтбокс в карточке товара
+    // Лайтбокс & zoom в карточке товара
     //---------------------------------------------------------------------------------------
-    $('.js-lightbox').lightbox({
-        'blur':false
-    });
+    function initZoom() {
+        var $el = $('.js-zoom'),
+            target = $el.attr('href');
+        $el.zoom({
+            url: target,
+            callback: function () {
+                $el.lightbox({
+                    'blur': false
+                });
+            }
+        })
+    }
+    if($('.js-zoom').length){initZoom()}
 
     //
     // Вкладки в карточке товара
