@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*News list (on News Page)*/
+.news-list{
+    list-style-type:none;
+    padding:0;
+}
+.news-list__item{
+    padding:10px 0;
+    border-bottom:1px solid $border-color;
+}
+.news-list__title{
+    @extend .g-title;
+    @include font-size(18px);
+    text-align:center;
+    @include media($mobile){
+        text-align:left;
+    }
+}
+.news-list__link{
+    color:$title-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
+.news-list__content{
+    @include font-size(12px);
+    line-height:1.125;
+}
+
+.news-list__thumb{
+    width:64px;
+    margin:0 auto 8px;
+    
+    @include media($mobile){
+        float:left;
+        margin:0 10px 0 0;
+    }
+
+}
+
+.news-list__meta{
+    color:$primary;
+    font-family:$font-light;
+    margin-bottom:6px;
+}
+.news-list__comment{
+    white-space:nowrap;
+}
+.news-list__entry{
+    margin:0;
+}
