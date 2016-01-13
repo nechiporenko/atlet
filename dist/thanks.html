@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Checkout Page</title>
+    <title>Thank You Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -210,16 +210,21 @@
                         <span itemprop="title">Корзина покупок</span>
                     </a>
                 </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="checkout.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title">Оформление заказа</span>
+                    </a>
+                </li>
                 <li class="breadcrumbs__item">
-                    Оформление заказа
+                    Спасибо за заказ
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
-            <h1 class="g-title">Оформление заказа</h1>
+            <h1 class="g-title">Ваша корзина</h1>
 
             <!--ORDER STEPS START-->
-            <ul class="b-steps b-steps--second">
+            <ul class="b-steps b-steps--third">
                 <li class="b-steps__item">
                     <span class="b-steps__num b-steps__num--active">1</span>
                     <span class="b-steps__name">Товары</span>
@@ -229,237 +234,26 @@
                     <span class="b-steps__name">Оформление заказа</span>
                 </li>
                 <li class="b-steps__item">
-                    <span class="b-steps__num">3</span>
+                    <span class="b-steps__num b-steps__num--active">3</span>
                     <span class="b-steps__name">Подтверждение</span>
                 </li>
             </ul>
             <!--/ORDER STEPS END-->
 
-            <!--BASKET BLOCK START-->
-            <div class="b-cart">
-
-                <div class="b-checkout">
-                    <div class="g-row">
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label"><span class="g-bright-color">*</span> Имя</label>
-                            <input type="text" class="g-input" required />
-                        </div>
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label">Фамилия</label>
-                            <input type="text" class="g-input" />
-                        </div>
-                    </div>
-                    <div class="g-row">
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label">Адрес</label>
-                            <input type="text" class="g-input" />
-                        </div>
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label">Город</label>
-                            <input type="text" class="g-input" />
-                        </div>
-                    </div>
-                    <div class="g-row">
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label"><span class="g-bright-color">*</span> E-Mail</label>
-                            <input type="email" class="g-input" required />
-                        </div>
-                        <div class="g-col g-col--one-half">
-                            <label class="g-label"><span class="g-bright-color">*</span> Телефон</label>
-                            <input type="text" class="g-input" required />
-                        </div>
-                    </div>
-                    <label class="g-label">Комментарий к заказу:</label>
-                    <textarea class="g-textarea"></textarea>
-
-                    <fieldset>
-                        <legend class="b-checkout__caption">Выберите удобный способ доставки для этого заказа:</legend>
-                        <div class="g-table-wrap">
-                            <table class="b-checkout__table">
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="b-checkout__title">Доставка Автолюксом</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" class="css-radio" name="shipping_method" id="r1" checked />
-                                        <label class="css-radio-label" for="r1">Наши сотрудники отправят товар Автолюксом</label>
-                                    </td>
-                                    <td class="g-text-right">
-                                        35.00грн
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="b-checkout__title">Доставка Новой Почтой</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" class="css-radio" name="shipping_method" id="r2" />
-                                        <label class="css-radio-label" for="r2">Наши сотрудники отправят товар Новой Почтой</label>
-                                    </td>
-                                    <td class="g-text-right">
-                                        35.00грн
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="b-checkout__title">Доставка УкрПочтой</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" class="css-radio" name="shipping_method" id="r3" />
-                                        <label class="css-radio-label" for="r3">Наши сотрудники отправят товар УкрПочтой</label>
-                                    </td>
-                                    <td class="g-text-right">
-                                        35.00грн
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="b-checkout__title">Курьером (только Киев)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" class="css-radio" name="shipping_method" id="r4" />
-                                        <label class="css-radio-label" for="r4">Курьером</label>
-                                    </td>
-                                    <td class="g-text-right">
-                                        35.00грн
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>                       
-                    </fieldset>
-
-                    <fieldset>
-                        <legend class="b-checkout__caption">Выберите способ оплаты для этого заказа:</legend>
-                        <div class="g-table-wrap">
-                            <table class="b-checkout__table">
-                                <tr>
-                                    <td>
-                                        <input type="radio" name="payment_method" id="r5" class="css-radio" />
-                                        <label for="r5" class="css-radio-label">Наличными (только по Киеву)</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" name="payment_method" id="r6" class="css-radio" checked />
-                                        <label for="r6" class="css-radio-label">Наложенный платеж</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" name="payment_method" id="r7" class="css-radio" />
-                                        <label for="r7" class="css-radio-label">На карту ПриватБанк</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="radio" name="payment_method" id="r8" class="css-radio" />
-                                        <label for="r8" class="css-radio-label">Банковский перевод</label>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </fieldset>
-                </div>
-
-                <div class="b-cart__wrap">
-                    <table class="b-cart__table">
-                        <thead>
-                            <tr>
-                                <th class="g-text-center">Фото</th>
-                                <th class="b-cart__td">Наименование товара</th>
-                                <th class="g-text-center">Модель</th>
-                                <th class="g-text-center">Количество</th>
-                                <th class="g-text-center">Цена</th>
-                                <th class="g-text-center">Итого</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="g-text-center">
-                                    <a href="product.html">
-                                        <img src="http://placehold.it/50x50" alt="Product" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="product.html" class="g-link">100% Whey Gold Standart (2273&nbsp;г)</a>
-                                </td>
-                                <td class="g-text-center">190002</td>
-                                <td class="g-text-right">
-                                    2
-                                </td>
-                                <td class="g-text-right">
-                                    1475.00грн
-                                </td>
-                                <td class="g-text-right">
-                                    2950.00грн
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="g-text-center">
-                                    <a href="product.html">
-                                        <img src="http://placehold.it/30x50" alt="Product" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="product.html" class="g-link">Animal Flex (44&nbsp;пак)</a>
-                                </td>
-                                <td class="g-text-center">130012</td>
-                                <td class="g-text-right">
-                                    1
-                                </td>
-                                <td class="g-text-right">
-                                    895.00грн
-                                </td>
-                                <td class="g-text-right">
-                                    895.00грн
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="b-cart__wrap">
-                    <table class="b-cart__table b-cart__table--total">
-                        <tr>
-                            <td>
-                                Сумма:
-                            </td>
-                            <td>3845.00грн</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Скидка от суммы заказа (7%):
-                            </td>
-                            <td>-269.15грн</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Итого:
-                            </td>
-                            <td>3575.85грн</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="b-cart__choice">
-                    <div class="g-row">
-                        <div class="g-col g-col--one-half">
-                            <a href="category.html" class="g-btn">Продолжить покупки</a>
-                        </div>
-                        <div class="g-col g-col--one-half">
-                            <a href="thanks.html" class="g-btn g-btn--alt">Подтвердить заказ</a>
-                        </div>
-                    </div>
-                </div>
+           <div class="b-thank">
+               <span class="b-thank__icon">
+                   <i class="icon-ok"></i>
+               </span>
+               <span class="g-title">
+                   Спасибо!
+                   <br />
+                   Заказ успешно оформлен
+               </span>
+               <p>В ближайшее время мы с Вами свяжемся для подтверждения заказа</p>
+           </div>
+            <div class="g-text-center">
+                <a href="category.html" class="g-btn">Продолжить покупки</a>
             </div>
-            <!--/BASKET BLOCK END-->
         </main>
         <!--/MAIN COLUMN END-->
 

@@ -109,9 +109,21 @@
       "src": "mfglabs"
     },
     {
+      "uid": "5e1ef647438e2204c15197c6efc4151e",
+      "css": "ok-circled",
+      "code": 59417,
+      "src": "mfglabs"
+    },
+    {
       "uid": "06301c50d89b5d3e651bd07ebd6d7de7",
       "css": "cancel",
       "code": 59393,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "15ba51cbb4d05e6fb88f03a31a7c711c",
+      "css": "info-circled-alt",
+      "code": 59418,
       "src": "mfglabs"
     },
     {
