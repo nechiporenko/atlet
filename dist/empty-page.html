@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Manufacturer Page - Empty Cart</title>
+    <title>Empty Inner Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -62,11 +62,76 @@
                                 <br />
                                 0.00 грн
                             </span>
-                            <button type="button" class="h-cart__btn js-hcart-toggle active"><i class="flaticon-basket37"></i></button>
+                            <button type="button" class="h-cart__btn js-hcart-toggle"><i class="flaticon-basket37"></i></button>
                         </div>
-                        <div class="h-cart__inner" style="display:block">
-                            <div class="h-cart__empty">
-                                В Вашей корзине еще нет покупок...
+                        <div class="h-cart__inner">
+                            <table class="h-cart__info">
+                                <tr>
+                                    <td>
+                                        <a href="#" class="h-cart__link">
+                                            <img src="http://placehold.it/30x47" class="h-cart__img" alt="Product" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="h-cart__link">100% Whey Gold Standart (2273г)</a>
+                                    </td>
+                                    <td>
+                                        x&nbsp;1
+                                    </td>
+                                    <td>
+                                        2950.00грн
+                                    </td>
+                                    <td>
+                                        <button type="button" class="h-cart__remove" title="Удалить">
+                                            <i class="icon-cancel"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="h-cart__link">
+                                            <img src="http://placehold.it/40x47" class="h-cart__img" alt="Product" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="h-cart__link">Animal Flex (44 пак)</a>
+                                    </td>
+                                    <td>
+                                        x&nbsp;1
+                                    </td>
+                                    <td>
+                                        350.00грн
+                                    </td>
+                                    <td>
+                                        <button type="button" class="h-cart__remove" title="Удалить">
+                                            <i class="icon-cancel"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="h-cart__total">
+                                <tr>
+                                    <td>
+                                        <b>Сумма:</b>
+                                    </td>
+                                    <td>3845.00грн</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Скидка от суммы заказа (7%):</b>
+                                    </td>
+                                    <td>-269.15грн</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Итого:</b>
+                                    </td>
+                                    <td>3575.85грн</td>
+                                </tr>
+                            </table>
+                            <div class="h-cart__action">
+                                <a href="cart.html" class="h-cart__action-link">Просмотр корзины</a>
+                                <a href="checkout.html" class="h-cart__action-link">Оформить заказ</a>
                             </div>
                         </div><!--/h-cart__inner-->
                     </div>
@@ -132,7 +197,7 @@
 
     <div class="page__inner">
         <!--MAIN COLUMN START-->
-        <main class="page__main page__main--alt">
+        <main class="page__main page__main--alt" itemscope="" itemtype="http://schema.org/Product">
             <!--BREADCRUMBS START-->
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -140,37 +205,25 @@
                         <span itemprop="title">Главная</span>
                     </a>
                 </li>
+                
                 <li class="breadcrumbs__item">
-                    Корзина покупок
+                    Заголовок страницы
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
-            <h1 class="g-title">Корзина покупок</h1>
-
-            <!--ORDER STEPS START-->
-            <ul class="b-steps">
-                <li class="b-steps__item">
-                    <span class="b-steps__num">1</span>
-                    <span class="b-steps__name">Товары</span>
-                </li>
-                <li class="b-steps__item">
-                    <span class="b-steps__num">2</span>
-                    <span class="b-steps__name">Оформление заказа</span>
-                </li>
-                <li class="b-steps__item">
-                    <span class="b-steps__num">3</span>
-                    <span class="b-steps__name">Подтверждение</span>
-                </li>
-            </ul>
-            <!--/ORDER STEPS END-->
-
-            <div class="b-thank">
-                <span class="g-subtitle">В Вашей корзине еще нет покупок</span>
-            </div>
-            <div class="g-text-center">
-                <a href="category.html" class="g-btn">Продолжить покупки</a>
-            </div>
+            <article class="page__description">
+                <h1 class="g-title">Заголовок страницы</h1>
+               
+                <p>Pellentesque habitant morbi <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis egestas. <b>Vestibulum tortor quam</b>, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                <ul>
+                    <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                    <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                    <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                    <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                </ul>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </article>
         </main>
         <!--/MAIN COLUMN END-->
 
@@ -262,7 +315,7 @@
                         </a>
                     </li>
                     <li class="b-category__item">
-                        <a href="category.html" class="b-category__link">
+                        <a href="category.html" class="b-category__link current">
                             <span class="b-category__link-text">Протеин</span>
                         </a>
                     </li>
@@ -453,7 +506,7 @@
                         <a href="manufacturer.html" class="b-fabricator__link">MuscleTech</a>
                     </li>
                     <li class="b-fabricator__item">
-                        <a href="manufacturer.html" class="b-fabricator__link current">MusсlePharm</a>
+                        <a href="manufacturer.html" class="b-fabricator__link">MusсlePharm</a>
                     </li>
                     <li class="b-fabricator__item">
                         <a href="manufacturer.html" class="b-fabricator__link">NutraBolics</a>
