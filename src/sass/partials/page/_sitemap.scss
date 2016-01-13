@@ -1,0 +1,29 @@
+﻿@import "../../modules/_base.scss";
+/*Sitemap (styled list)*/
+.sitemap{
+    @extend .g-clearlist;
+
+    .sitemap{
+        margin-top:10px;
+
+        .sitemap__item{
+            &:before{
+                color:$text-color;
+            }
+        }
+    }
+}
+.sitemap__item{
+    margin-bottom:10px;
+    padding-left:1em;
+    text-indent:-.7em;
+    @include font-size(12px);
+
+    &:before{
+        content: "• ";
+        color:$primary-alt;
+    }
+}
+.sitemap__link{
+    @extend .g-link;
+}
