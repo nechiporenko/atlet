@@ -1,0 +1,19 @@
+﻿@import "../../modules/_base.scss";
+/*Post Comment Block*/
+.b-comment{
+    padding-top:40px;
+    @include font-size(12px);
+    line-height:1.125;
+
+    .g-label{
+        color:$primary;
+    }
+}
+.b-comment__count{
+    @include font-size(14px);
+    margin-bottom:25px;
+}
+.b-comment__back{
+    @include font-size(14px);
+    text-align:right;
+}

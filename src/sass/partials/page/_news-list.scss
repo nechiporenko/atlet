@@ -9,8 +9,7 @@
     border-bottom:1px solid $border-color;
 }
 .news-list__title{
-    @extend .g-title;
-    @include font-size(18px);
+    @extend .g-subtitle;
     text-align:center;
     @include media($mobile){
         text-align:left;
