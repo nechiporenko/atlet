@@ -127,10 +127,11 @@
 }
 .b-promo__caption{
     display:block;
-    min-height:24px;
+    height:24px;
     color:$text-color-dark;
     @include font-size(12px);
     margin-bottom:5px;
+    overflow:hidden;
 }
 .b-promo__thumb{
     width:90px;

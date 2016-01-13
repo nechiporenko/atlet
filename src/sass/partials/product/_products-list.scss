@@ -44,6 +44,7 @@
     margin-bottom:8px;
     @include font-size(14px);
     @include px2rem(letter-spacing, -.8px);
+    overflow:hidden;
 }
 .products-list__inner{
     width:116px;

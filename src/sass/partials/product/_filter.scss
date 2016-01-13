@@ -1,9 +1,13 @@
 ﻿@import "../../modules/_base.scss";
 /*Product Filter*/
 .b-filter{
-    border-top:1px solid $border-color;
-    padding:8px 0;
     @include font-size(12px);
+}
+
+.b-filter__row{
+    @extend .g-row;
+    padding-top:8px;
+    border-top:1px solid $border-color;
 }
 
 .b-filter__label{
@@ -40,12 +44,13 @@
 }
 .b-filter__item{
     display:block;
-    margin:4px 0;
-    @include font-size(12px);
+    margin:8px 0;
+    @include font-size(14px);
 
     @include media($mobile){
         display:inline-block;
         margin-right:5px;
+        margin:4px 5px 4px 0;
     }
 }
 .b-filter__link{

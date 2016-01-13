@@ -256,15 +256,26 @@
                     </ul>
 
                     <form class="b-product__order">
-                        <div class="b-product__order-col">
+                        <div class="g-text-center">
                             <label class="b-product__label">Количество:</label>
-                            <input type="text" class="b-product__input" value="1" required />
+                            <select class="b-product__count">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
-                        <div class="b-product__order-col">
-                            <button type="submit" class="b-product__btn" data-modal="#to-cart"><i class="flaticon-basket37"></i></button>
-                            <button type="button" class="b-product__btn b-product__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <button type="submit" class="b-product__btn" data-modal="#to-cart"><i class="flaticon-basket37"></i> Купить</button>
+                            </div>
+                            <div class="g-col g-col--one-half">
+                                <button type="button" class="b-product__btn b-product__btn--alt" data-modal="#fast-order">Быстрый заказ</button>
+                            </div>
                         </div>
                     </form>
+
                     <div class="b-product__social">
                         //..social buttons code..
                     </div>
