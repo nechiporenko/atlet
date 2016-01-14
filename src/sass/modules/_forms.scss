@@ -16,7 +16,9 @@ textarea {
 .g-input,
 .g-select,
 .g-textarea{
+    display:inline-block;
     width:100%;
+    vertical-align:middle;
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius:$border-radius;

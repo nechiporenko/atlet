@@ -163,6 +163,7 @@
 .b-product__label{
     @extend .g-label;
     display:inline-block;
+    vertical-align:middle;
 }
 .b-product__count{
     @extend .g-select;

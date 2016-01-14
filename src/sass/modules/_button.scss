@@ -2,6 +2,7 @@
 /* Buttons */
 .g-btn{
     display: inline-block;
+    vertical-align:middle;
     @include px2rem(height, 36px);
     @include px2rem(padding, 0 10px);
     color:#fff;
