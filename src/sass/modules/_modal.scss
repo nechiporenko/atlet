@@ -56,3 +56,29 @@
     text-decoration:none;
     color:$text-color;
 }
+
+.modal--full{
+    max-width:unset;
+    border-radius:0;
+    padding:0;
+    .modal__content{
+        border-radius:0;
+    }
+}
+
+.modal--dark{
+    .modal__content{
+        background:$title-color;
+        color:#fff;
+    }
+    .modal__close{
+        color:#fff;
+    }
+    a{
+        color:#fff;
+    }
+    .g-title,
+    .g-subtitle{
+        color:#fff;
+    }
+}

@@ -1,0 +1,63 @@
+﻿@import "../../modules/_base.scss";
+/*To Ask - modal window question*/
+.b-toask{
+    @extend .g-clearfix;
+    margin-bottom:10px;
+    text-align:center;
+}
+.b-toask__thumb{
+    width:76px;
+    height:76px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid $border-color;
+    position:relative;
+    box-sizing:border-box;
+}
+
+
+@include media($tablet){
+    .b-toask{
+        text-align:left;
+    }
+    .b-toask__thumb{
+        float:left;
+        margin:0 20px 10px 0;
+    }
+}
+
+.b-toask__img{
+    @extend .g-img-centered;
+}
+
+.b-toask__title{
+    margin-bottom:25px;
+    @include font-size(15px);
+    font-family:$font-bold;
+}
+.b-toask__link{
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+}
+
+.b-toask__label{
+    display:inline-block;
+    padding:4px 8px;
+    margin-left:5px;
+    vertical-align:middle;
+    font-family:$font-regular;
+    color:#fff;
+    @include font-size(12px);
+    background:$primary-bright;
+    border-radius:20px;
+    white-space:nowrap;
+}
+.b-toask__label--success{
+    background:$primary-success;
+}
