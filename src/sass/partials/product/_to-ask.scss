@@ -61,3 +61,8 @@
 .b-toask__label--success{
     background:$primary-success;
 }
+
+.b-toask__input{
+    @extend .g-input;
+    width:auto;
+}

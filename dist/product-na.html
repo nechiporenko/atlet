@@ -899,62 +899,12 @@
                 </div>
                 <div class="g-col g-col--one-half">
                     <label class="g-visuallyhidden">Ваш телефон</label>
-                    <input type="text" class="g-input" placeholder="Ваш номер телефона" required />
+                    <input type="text" class="g-input js-phone" placeholder="Ваш номер телефона" required />
                 </div>
             </div>
             <button type="submit" class="g-btn">Жду звонка <i class="icon-right-open"></i></button>
         </form>
-    </div>
-
-    <div class="modal" id="to-cart">
-        <div class="modal__content g-text-center">
-            <span class="g-title">Товар добавлен в корзину!</span>
-            <p>
-                <a href="cart.html" class="g-link"><i class="icon-bag"></i> Оформить заказ</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="modal" id="fast-order">
-        <form class="modal__content">
-            <span class="g-title">Быстрый заказ</span>
-            <div class="g-row">
-                <figure class="g-col g-col--one-third g-text-center">
-                    <a href="product.html">
-                        <img src="http://placehold.it/100x100" alt="Product" />
-                    </a>
-                </figure>
-                <div class="g-col g-col--two-thirds">
-                    <a href="product.html" class="g-subtitle g-link">Real Mass Probiotic Series (5400 г)</a>
-                    <p><b>1461.00грн</b></p>
-                    <p>Real Mass Probiotic Series (5400 г) от Gaspari Nutrition — высокоэффективный гейнер, способствующий активному набору массы. В состав этого гейнера входит специальный комплекс, который помогает..</p>
-                </div>
-            </div>
-            <span class="g-subtitle">Заполните Ваши контактные данные</span>
-            <div class="g-row">
-                <div class="g-col g-col--one-half">
-                    <label class="g-label"><i class="icon-torso"></i>Ваше имя</label>
-                    <input type="text" class="g-input" placeholder="Как Вас зовут?" required />
-                </div>
-                <div class="g-col g-col--one-half">
-                    <label class="g-label"><i class="icon-phone"></i>Ваш телефон</label>
-                    <input type="text" class="g-input" placeholder="Контактный телефон" required />
-                </div>
-            </div>
-            <div class="g-row">
-                <div class="g-col g-col--one-half">
-                    <label class="g-label"><i class="icon-comment"></i>Комментарий</label>
-                    <input type="text" class="g-input" placeholder="Комментарий к заказу" />
-                </div>
-                <div class="g-col g-col--one-half">
-                    <label class="g-label"><i class="icon-bag"></i>Количество товара</label>
-                    <input type="number" class="g-input" value="1" required min="1" />
-                </div>
-            </div>
-            <button type="submit" class="g-btn">Заказать <i class="icon-right-open"></i></button>
-        </form>
-    </div>
-
+    </div>    
 
     <div class="modal modal--full modal--dark" id="to-ask">
         <div class="modal__content">
@@ -979,7 +929,7 @@
                     <div class="g-row">
                         <div class="g-col g-col--one-fourth">
                             <label class="g-visuallyhidden">Номер телефона</label>
-                            <input type="text" class="g-input" placeholder="Номер телефона" required />
+                            <input type="text" class="g-input js-phone" placeholder="Номер телефона" required />
                         </div>
                         <div class="g-col g-col--one-fourth">
                             <button type="submit" class="g-btn g-btn--alt g-full-width">Перезвоните мне</button>

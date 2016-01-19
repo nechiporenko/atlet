@@ -1,0 +1,43 @@
+﻿@import "../../modules/_base.scss";
+/*Product Desktop Slide Panel (Short Order)*/
+
+.page__panel{
+    padding:20px 0;
+    height:116px;
+    box-sizing:border-box;
+    position:fixed;
+    top:-116px; left:0;
+    width:100%;
+    background:$title-color;
+    z-index:1200;
+    color:#fff;
+    overflow:hidden;
+    @include transition(transform .3s ease-in);
+    display:none;
+
+    &.active{
+        @include transform(translateY(116px));
+    }
+
+    .b-toask__title{
+        margin-bottom:20px;
+        white-space:nowrap;
+    }
+
+    .g-btn,
+    .b-toask,
+    .b-toask__input,
+    .b-toask__thumb{
+        margin-bottom:0;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+}
+
+.no-csstransforms{
+    .page__panel.active{
+        top:0;
+    }
+}
